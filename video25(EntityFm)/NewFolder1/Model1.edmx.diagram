@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7dd791248def4101a64cb804d4369dbe" Name="Diagram1">
+        <EntityTypeShape EntityType="Csharp03Model.Author" Width="1.5" PointX="5.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Author1" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Author2" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Book" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Book1" Width="1.5" PointX="8" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Book2" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.City" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Country" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Group" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Groups2" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Student" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Students2" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.sysdiagram" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Employee" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Csharp03Model.Students2Info" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="Csharp03Model.FK__Book__AuthorId__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="Csharp03Model.FK__Book1__AuthorId__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="Csharp03Model.FK__City__CountryId__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="Csharp03Model.FK__Students2__CityI__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="Csharp03Model.FK__Students2__Group__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="Csharp03Model.Author2ToBook2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
