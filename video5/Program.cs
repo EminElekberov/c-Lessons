@@ -74,7 +74,6 @@ namespace video5
                 }
             }
             return searchBook;
-
         }
 
         public List<BOOK> FindAllBooksByPageCount(int min,int max)

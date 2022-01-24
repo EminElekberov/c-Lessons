@@ -8,6 +8,39 @@ namespace video2
         static void Main(string[] args)
         {
 
+            //Console.WriteLine("Secim edin \n" +
+            //    "\n A" +
+            //    "\n b");
+            //string example = Console.ReadLine();
+            //int res = Convert.ToInt32(Console.ReadLine());
+            //string message = null;
+            //switch (res)
+            //{
+            //    case 1:
+            //        message = "bu herf A dir";
+            //        break;
+            //    case 2:
+            //        message = "bu herf b dir";
+            //        break;
+            //    default:
+            //        message = "daxil etdiyiniz melumat sehvdir";
+            //        break;
+            //}
+            //return message;
+            Console.WriteLine("reqem daxil edin");
+            int s = Convert.ToInt32(Console.ReadLine());
+            if (s > 0)
+            {
+                Console.WriteLine("bu eded mubet ededdir");
+            }
+            else if (s < 0)
+            {
+                Console.WriteLine("bub eded menfidir");
+            }
+            else
+            {
+                Console.WriteLine("bu eded 0 beraberdir");
+            }
             /*
             string a = "hello ";
             string b = "hello";
@@ -70,7 +103,7 @@ namespace video2
             */
 
 
-            
+
             int number = 5;
             ChangeNumber(ref number);
             Console.WriteLine(number);
@@ -80,76 +113,94 @@ namespace video2
         {
             num = 100;
         }
-           
 
-            /*
-            int number;
-            ChangeNumber(out number);
-            Console.WriteLine(number);
-        }
-        private static void ChangeNumber(out int num)
+
+        /*
+        int number;
+        ChangeNumber(out number);
+        Console.WriteLine(number);
+    }
+    private static void ChangeNumber(out int num)
+    {
+        num = 100;
+    }
+        */
+
+
+        /*
+        //1
+        int[] number = new int[5];
+        //2
+        int[] number2 = new int[5] {1,2,3,4,5};
+        //3
+        int[] number3 = { 3, 4, 5,6 };
+        //4
+        string[] sm = new string[] { "a", "b", "c" };
+        number3.SetValue(5, 0);
+        for (int i = 0; i < number3.Length; i++)
         {
-            num = 100;
+            Console.WriteLine(i);
         }
-            */
+        */
 
-
-            /*
-            //1
-            int[] number = new int[5];
-            //2
-            int[] number2 = new int[5] {1,2,3,4,5};
-            //3
-            int[] number3 = { 3, 4, 5,6 };
-            //4
-            string[] sm = new string[] { "a", "b", "c" };
-            number3.SetValue(5, 0);
-            for (int i = 0; i < number3.Length; i++)
-            {
-                Console.WriteLine(i);
-            }
-            */
-
-            /*
-            int[] number3 = { 3, 4, 5, 6 };
-            for (int i = 0; i < number3.Length; i++)
-            {
-                Console.WriteLine(number3[i]);
-            }
-            */
-
-
-            
-            //int[] numbers = { 1, 2, 6, 5, 55, 23,2,5 };
-            //int[] notDublicate = numbers.Distinct().ToArray();
-            //foreach (var item in notDublicate)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            
-
-            /*
-            int[] numbers = { 1, 2, 6, 5, 55, 23, 2, 5 };
-            int[] notDublicate = numbers.Distinct().ToArray();
-            Array.Sort(notDublicate);
-
-            foreach (var item in notDublicate)
-            {
-                Console.WriteLine(item);
-            }
-            */
-
-            //int[] numbers2 = { 1, 2, 6, 5, 55, 23, 2, 5 };
-            //int arrayFirstElement = numbers2[0];
-            //for (int i = 0; i < numbers2.Length; i++)
-            //{
-            //    if (numbers2[i]>arrayFirstElement)
-            //    {
-            //        arrayFirstElement = numbers2[i];
-
-            //    }
-            //}
-            //Console.WriteLine(arrayFirstElement);
+        /*
+        int[] number3 = { 3, 4, 5, 6 };
+        for (int i = 0; i < number3.Length; i++)
+        {
+            Console.WriteLine(number3[i]);
         }
-     
+        */
+
+
+
+        //int[] numbers = { 1, 2, 6, 5, 55, 23,2,5 };
+        //int[] notDublicate = numbers.Distinct().ToArray();
+        //foreach (var item in notDublicate)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+
+        /*
+        int[] numbers = { 1, 2, 6, 5, 55, 23, 2, 5 };
+        int[] notDublicate = numbers.Distinct().ToArray();
+        Array.Sort(notDublicate);
+
+        foreach (var item in notDublicate)
+        {
+            Console.WriteLine(item);
+        }
+        */
+
+        //int[] numbers2 = { 1, 2, 6, 5, 55, 23, 2, 5 };
+        //int arrayFirstElement = numbers2[0];
+        //for (int i = 0; i < numbers2.Length; i++)
+        //{
+        //    if (numbers2[i]>arrayFirstElement)
+        //    {
+        //        arrayFirstElement = numbers2[i];
+
+        //    }
+        //}
+        //Console.WriteLine(arrayFirstElement);
+
+        public static string Result(int year)
+        {
+            string level;
+            switch (year)
+            {
+                case 0:
+                    level = "in";
+                    break;
+                case 1:
+                    level = "2";
+                    break;
+                default:
+                    level = "eferfc";
+                    break;
+            }
+            return level;
+        }
+    }
 }
+

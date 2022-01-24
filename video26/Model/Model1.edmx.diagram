@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8c1f6e78f8a4dffadf8df36942c4b73" Name="Diagram1">
+        <EntityTypeShape EntityType="MedicineCsharp03Model.Medicine" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicineCsharp03Model.Sale" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicineCsharp03Model.SalesMedicine" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicineCsharp03Model.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicineCsharp03Model.Type" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedicineCsharp03Model.User" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="MedicineCsharp03Model.FK_Medicines_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicineCsharp03Model.FK_SalesMedicines_Medicines" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicineCsharp03Model.FK_Sale_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MedicineCsharp03Model.FK_SalesMedicines_Sale" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

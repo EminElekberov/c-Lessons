@@ -30,7 +30,6 @@ namespace video11_task_
                 throw new sameBookAlreadyAddedException("this book exist");
             }
         }
-
         public List<Book> Filtername(string author, Genre genre)
         {
             string nonCapital = author.Trim().ToLower();
