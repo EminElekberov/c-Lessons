@@ -15,10 +15,10 @@ namespace LibraryApi.Model
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class LibraryEntities2 : DbContext
+    public partial class LibraryEntities3 : DbContext
     {
-        public LibraryEntities2()
-            : base("name=LibraryEntities2")
+        public LibraryEntities3()
+            : base("name=LibraryEntities3")
         {
         }
     
@@ -29,6 +29,7 @@ namespace LibraryApi.Model
     
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<Login_Admin> Login_Admin { get; set; }
         public virtual DbSet<Login_User> Login_User { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Reader> Readers { get; set; }

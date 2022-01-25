@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace example
@@ -51,52 +52,16 @@ namespace example
             //register.Invoke(20);
             //
             #endregion
-            Console.OutputEncoding = Encoding.UTF8; 
 
-        link1:
-            Console.Clear();     
+              Brutforce b = new Brutforce()
+            {
 
-            string[] powlvl = { "aşağı", "orta", "yüksək" }; 
-
-            Console.Write(" Güc dəyərini daxil edin (1-10): "); 
-            int pown = Convert.ToInt32(Console.ReadLine());      
-
-
-            string[] splvl = { "az", "kifayət qədər", "çox" };                                                                                                                       Console.Write(" Введите количество колонок(1-10): ");    //Ввод значения количества колонок
-            int spn = Convert.ToInt32(Console.ReadLine());          
-
-
-            string[] roomlvl = { "kiçik", "orta", "böyük" };
-            Console.Write(" Otağın ölçüsünü daxil edin(1-3): ");                        
-            int roomn = Convert.ToInt32(Console.ReadLine());
-
-            String time = " Quraşdırma vaxtı: ";                                       
-            string[] timelvl = { "az", "orta", "kifayət qədər", "çox" };           
-                                                                                     
-            if (pown > 6 && spn < 4 && roomn == 1)
-            { Console.Write(time + timelvl[0] + "\n\r"); }
-            else if (pown > 6 && spn > 6 && roomn == 2)
-            { Console.Write(time + timelvl[2] + "\n\r"); }
-            else if (pown < 4 && spn > 6 && roomn == 3)
-            { Console.Write(time + timelvl[3] + "\n\r"); }
-            else if (pown > 3 && pown < 7 && spn > 3 && spn < 7 && roomn == 2)
-            { Console.Write(time + timelvl[2] + "\n\r"); }
-            else { Console.Write(time + timelvl[1] + "\n\r"); }
-
-        link2: Console.Write("\n Yenidən başladın? (y / n)");
-            string i = Console.ReadLine();        
-            if (i == "y")                       
-            {                                  
-                goto link1;                    
-            }                                 
-            else if (i == "n")               
-            {                               
-                Environment.Exit(0);         
-            }                             
-            else if (i != "y" || i != "n")   
-            {                           
-                goto link2;             
-            }                         
+                Alphabet = new[] { 'a', 'b', 'c', 'd' }
+            };
+            ICollection<string> vals = b.Calculate(3);
+            foreach (var elem in vals)
+                Console.WriteLine(elem);
+            Console.ReadKey();
         }
     }
 

@@ -16,7 +16,7 @@ namespace LibraryApi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UsersOrder());
+            Application.Run(new Splash());
         }
     }
 }

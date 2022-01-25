@@ -116,5 +116,10 @@ namespace Llibrary_Management_System
             int orderscount = db.Orderrs.Where(x => x.ReaderId == readerid && x.returned == false).Count();
             label2.Text = orderscount.ToString();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

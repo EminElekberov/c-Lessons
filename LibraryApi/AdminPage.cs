@@ -13,11 +13,11 @@ namespace LibraryApi
 {
     public partial class AdminPage : Form
     {
-        private readonly LibraryEntities2 _db;
+        private readonly LibraryEntities3 _db;
         public AdminPage()
         {
             InitializeComponent();
-            _db = new LibraryEntities2();
+            _db = new LibraryEntities3();
         }
 
         private void AdminPage_Load(object sender, EventArgs e)
@@ -77,6 +77,12 @@ namespace LibraryApi
                 x.Fullname,
                 x.Email
             }).ToList();
+        }
+
+        private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnBook returnBook = new ReturnBook();
+            returnBook.ShowDialog();
         }
     }
 }

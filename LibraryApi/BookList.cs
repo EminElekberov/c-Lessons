@@ -13,12 +13,12 @@ namespace LibraryApi
 {
     public partial class BookList : Form
     {
-        private readonly LibraryEntities2 _db;
+        private readonly LibraryEntities3 _db;
         public static int bookId;
         public BookList()
         {
             InitializeComponent();
-            _db = new LibraryEntities2();
+            _db = new LibraryEntities3();
         }
 
         private void BookList_Load(object sender, EventArgs e)

@@ -13,12 +13,12 @@ namespace LibraryApi
 {
     public partial class AddReader : Form
     {
-        private readonly LibraryEntities2 _db;
+        private readonly LibraryEntities3 _db;
 
         public AddReader()
         {
             InitializeComponent();
-            _db = new LibraryEntities2();
+            _db = new LibraryEntities3();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace LibraryApi
                      MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (identity.Length < 11 && name.Length<3)
+            if (identity.Length < 11 && name.Length < 3)
             {
                 MessageBox.Show("Identiti and name are wrong", "Warning",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -83,9 +83,9 @@ namespace LibraryApi
             string email = txtemail.Text.Trim();
             string identity = txtidentity.Text.Trim();
             Model.Reader updatereader = _db.Readers.FirstOrDefault(x => x.IdentityNum.ToLower() == identity.ToLower());
-            if (updatereader==null)
+            if (updatereader == null)
             {
-                MessageBox.Show("This name is not exist","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("This name is not exist", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -95,6 +95,30 @@ namespace LibraryApi
             }
             MessageBox.Show("success");
             _db.SaveChanges();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name = txtname.Text.Trim();
+            string email = txtemail.Text.Trim();
+            if (name == "" && email == "")
+            {
+                MessageBox.Show("Please Fill All TextBox !!!", "Warning",
+                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            Model.Reader reader = _db.Readers.FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
+            if (reader == null)
+            {
+                MessageBox.Show("this User does not Registered", "Warning",
+                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            _db.Readers.Remove(reader);
+            _db.SaveChanges();
+            DgvRefreh();
+            // MessageBox.Show("succcess");
         }
     }
 }

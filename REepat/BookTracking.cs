@@ -16,5 +16,10 @@ namespace Llibrary_Management_System
         {
             InitializeComponent();
         }
+
+        private void BookTracking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

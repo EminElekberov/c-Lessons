@@ -13,12 +13,12 @@ namespace LibraryApi
 {
     public partial class Regsiter : Form
     {
-        private readonly LibraryEntities2 _db;
+        private readonly LibraryEntities3 _db;
 
         public Regsiter()
         {
             InitializeComponent();
-            _db = new LibraryEntities2();
+            _db = new LibraryEntities3();
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
@@ -75,6 +75,11 @@ namespace LibraryApi
 
             }
             return true;
+        }
+
+        private void Regsiter_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

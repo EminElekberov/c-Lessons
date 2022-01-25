@@ -14,12 +14,12 @@ namespace LibraryApi
 {
     public partial class AddBook : Form
     {
-        private readonly LibraryEntities2 _db;
+        private readonly LibraryEntities3 _db;
         public static int bookid;
         public AddBook()
         {
             InitializeComponent();
-            _db = new LibraryEntities2();
+            _db = new LibraryEntities3();
         }
 
         private void AddBook_Load(object sender, EventArgs e)
@@ -113,6 +113,55 @@ namespace LibraryApi
         {
             BookList bookList = new BookList();
             bookList.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string searchname = txtAddName.Text.Trim().ToLower();
+
+            if (searchname == "")
+            {
+                MessageBox.Show("Please Fill All TextBox !!!", "Warning",
+                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            Model.Book book = _db.Books.FirstOrDefault(x => x.Name.ToLower() == searchname);
+            if (book==null)
+            {
+                MessageBox.Show("this book not exist!!!", "Warning",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                _db.Books.Remove(book);
+                _db.SaveChanges();
+                MessageBox.Show("Success");
+            }
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddReader addReader = new AddReader();
+            addReader.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddReader addReader = new AddReader();
+            addReader.ShowDialog();
+        }
+
+        private void bookListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookList bookList = new BookList();
+            bookList.ShowDialog();
+        }
+
+        private void giveBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserOrder userOrder = new UserOrder();
+            userOrder.ShowDialog();
         }
     }
 }

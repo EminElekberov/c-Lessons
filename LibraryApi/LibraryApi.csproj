@@ -80,10 +80,20 @@
       <DependentUpon>BookList.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Cb_genre.cs" />
+    <Compile Include="Helper\Cb_Order.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Book.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Genre.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Login_Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Login_User.cs">
@@ -127,17 +137,29 @@
     <Compile Include="Regsiter.Designer.cs">
       <DependentUpon>Regsiter.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBook.Designer.cs">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserOrder.Designer.cs">
       <DependentUpon>UserOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsersOrder.Designer.cs">
-      <DependentUpon>UsersOrder.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
@@ -151,6 +173,9 @@
     <EmbeddedResource Include="BookList.resx">
       <DependentUpon>BookList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -163,11 +188,17 @@
     <EmbeddedResource Include="Regsiter.resx">
       <DependentUpon>Regsiter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBook.resx">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserOrder.resx">
       <DependentUpon>UserOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersOrder.resx">
-      <DependentUpon>UsersOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

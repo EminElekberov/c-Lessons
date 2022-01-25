@@ -16,5 +16,15 @@ namespace Llibrary_Management_System
         {
             InitializeComponent();
         }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndelete_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
