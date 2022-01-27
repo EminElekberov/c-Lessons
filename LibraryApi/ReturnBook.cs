@@ -24,24 +24,29 @@ namespace LibraryApi
 
         private void ReturnBook_Load(object sender, EventArgs e)
         {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.DataSource = _db.Readers.Select(x => new Cb_genre
             {
                Id=x.Id, 
                Name=x.Fullanme
             }).ToArray();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = ((Cb_genre)comboBox1.SelectedItem).Id;
-            dataGridView1.DataSource = _db.Orders.Where(x => x.ReaderID == id).Select(x => new
+            if (comboBox1.SelectedItem!=null)
             {
-                UserId=x.Reader.Id,
-                BookName=x.Book.Name,
-                Startdate=x.Startdate,
-                EndDate=x.EndDate,
-                Price=x.DebtBook
-            }).ToList();
+                int id = ((Cb_genre)comboBox1.SelectedItem).Id;
+                dataGridView1.DataSource = _db.Orders.Where(x => x.ReaderID == id).Select(x => new
+                {
+                    UserId = x.Reader.Id,
+                    BookName = x.Book.Name,
+                    Startdate = x.Startdate,
+                    EndDate = x.EndDate,
+                    Price = x.DebtBook
+                }).ToList();
+            }
         }
 
 

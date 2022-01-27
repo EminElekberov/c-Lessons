@@ -161,7 +161,7 @@ namespace video2
         //}
 
 
-        /*
+       
         int[] numbers = { 1, 2, 6, 5, 55, 23, 2, 5 };
         int[] notDublicate = numbers.Distinct().ToArray();
         Array.Sort(notDublicate);
@@ -170,7 +170,7 @@ namespace video2
         {
             Console.WriteLine(item);
         }
-        */
+        
 
         //int[] numbers2 = { 1, 2, 6, 5, 55, 23, 2, 5 };
         //int arrayFirstElement = numbers2[0];

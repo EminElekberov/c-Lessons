@@ -20,8 +20,8 @@ namespace video19
             #endregion
 
             #region
-            //Console.WriteLine(Y());
-            //Console.ReadKey();
+            Console.WriteLine(Y());
+            Console.ReadKey();
             #endregion
 
             #region

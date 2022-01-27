@@ -45,6 +45,7 @@ namespace video11_task_
             if (remove != null)
             {
                 Books.Remove(remove);
+                Console.WriteLine("silindi");
             }
             else
             {

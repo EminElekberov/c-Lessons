@@ -37,7 +37,8 @@ namespace video11_task_
             //    Console.WriteLine(item.Name+" "+item.Author+" "+item.Genre.ToString());
             //}
             //Console.WriteLine("-----------");
-            library.ShowInfo("Python");
+            //library.ShowInfo("Python");
+            //library.Remove("Python");
         }
     }
 }
