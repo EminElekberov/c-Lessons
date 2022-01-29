@@ -71,7 +71,7 @@ namespace LibraryApi
             if (toDay > endDate)
             {
                 double otherMany = (price * 0.3) * days;
-                label2.Text = "Bu kitab " + days.ToString() + " gecikib ve elave odenis " + otherMany.ToString();
+                label3.Text = "Bu kitab " + days.ToString() + " gecikib ve elave odenis " + otherMany.ToString();
             }
             else
             {

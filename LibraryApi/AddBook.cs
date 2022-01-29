@@ -54,7 +54,7 @@ namespace LibraryApi
             string Writer = txtwriter.Text.Trim().ToLower();
             double price = double.Parse(txtprice.Value.ToString());
             int amount = int.Parse(txtamount.Value.ToString());
-            if (name=="" || Writer=="" || price==null || amount==null)
+            if (name == "" || Writer == "" || price == null || amount == null)
             {
                 MessageBox.Show("Please Fill All TextBox", "Warning",
                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -64,12 +64,12 @@ namespace LibraryApi
             {
                 Model.Book books = new Model.Book
                 {
-                    GenreId=TypeId,
-                    Name=name,
-                    Writer=Writer,
-                    Amount=amount,
-                    Price=price,
-                    IsDeleted=false
+                    GenreId = TypeId,
+                    Name = name,
+                    Writer = Writer,
+                    Amount = amount,
+                    Price = price,
+                    IsDeleted = false
                 };
                 _db.Books.Add(books);
                 _db.SaveChanges();
@@ -121,23 +121,24 @@ namespace LibraryApi
 
             if (searchname == "")
             {
-                MessageBox.Show("Please Fill All TextBox !!!", "Warning",
+                MessageBox.Show("Please Fill All TextBox ", "Warning",
                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Model.Book book = _db.Books.FirstOrDefault(x => x.Name.ToLower() == searchname);
-            if (book==null)
+            Model.Book book = _db.Books.FirstOrDefault(x => x.Name.ToLower().Trim() == searchname);
+            if (book != null)
             {
-                MessageBox.Show("this book not exist!!!", "Warning",
-                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                _db.Books.Remove(book);
+                MessageBox.Show("Success");
+                //
             }
             else
             {
-                _db.Books.Remove(book);
-                _db.SaveChanges();
-                MessageBox.Show("Success");
+                MessageBox.Show("this book not exist", "Warning",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+            _db.SaveChanges();
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
