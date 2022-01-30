@@ -26,7 +26,7 @@ namespace vidyo28
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            app.UseRouting(); 
 
             app.UseEndpoints(endpoints =>
             {
