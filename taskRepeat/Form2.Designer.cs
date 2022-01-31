@@ -1,5 +1,5 @@
 ﻿
-namespace winform17
+namespace taskRepeat
 {
     partial class Form2
     {
@@ -39,44 +39,44 @@ namespace winform17
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 46);
+            this.label1.Location = new System.Drawing.Point(81, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 15);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select Group";
             // 
             // cmb_GroupDelete
             // 
             this.cmb_GroupDelete.FormattingEnabled = true;
-            this.cmb_GroupDelete.Location = new System.Drawing.Point(72, 64);
+            this.cmb_GroupDelete.Location = new System.Drawing.Point(62, 55);
             this.cmb_GroupDelete.Name = "cmb_GroupDelete";
-            this.cmb_GroupDelete.Size = new System.Drawing.Size(121, 23);
+            this.cmb_GroupDelete.Size = new System.Drawing.Size(104, 21);
             this.cmb_GroupDelete.TabIndex = 1;
             this.cmb_GroupDelete.SelectedIndexChanged += new System.EventHandler(this.cmb_GroupDelete_SelectedIndexChanged);
             // 
             // cmb_StudentDelete
             // 
             this.cmb_StudentDelete.FormattingEnabled = true;
-            this.cmb_StudentDelete.Location = new System.Drawing.Point(72, 178);
+            this.cmb_StudentDelete.Location = new System.Drawing.Point(62, 154);
             this.cmb_StudentDelete.Name = "cmb_StudentDelete";
-            this.cmb_StudentDelete.Size = new System.Drawing.Size(121, 23);
+            this.cmb_StudentDelete.Size = new System.Drawing.Size(104, 21);
             this.cmb_StudentDelete.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 160);
+            this.label2.Location = new System.Drawing.Point(81, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Select Student";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(27, 284);
+            this.button1.Location = new System.Drawing.Point(23, 246);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 77);
+            this.button1.Size = new System.Drawing.Size(163, 67);
             this.button1.TabIndex = 4;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@ namespace winform17
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 407);
+            this.ClientSize = new System.Drawing.Size(220, 353);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmb_StudentDelete);
             this.Controls.Add(this.label2);

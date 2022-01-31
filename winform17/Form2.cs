@@ -57,5 +57,10 @@ namespace winform17
 
             cmb_StudentDelete.Items.AddRange(studentDelete.ToArray());
         }
+
+        private void cmb_GroupDelete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

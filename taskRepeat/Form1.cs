@@ -12,86 +12,76 @@ namespace taskRepeat
 {
     public partial class Form1 : Form
     {
-        public List<Genre> genre;
-        public List<Book> books;
+        public List<Group> _groups;
+        public List<Student> _student;
         public Form1()
         {
-            books = new List<Book>();
-            genre = new List<Genre>
-            {
-                new Genre{name="Roman"},
-                new Genre{name="Felsefe"},
-
-            };
+            _student = new List<Student>();
+            _groups = new List<Group>();
             InitializeComponent();
+            _groups.Add(new Group("P609"));
+            _groups.Add(new Group("P506"));
+            foreach (var item in _groups)
+            {
+                cmb_select.Items.Add(item);
+            }
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //burdaki kodlar islemir
-
+            cmb_select.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_select.SelectedIndex = 0;
         }
-        private void label4_Click(object sender, EventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_add_Click(object sender, EventArgs e)
         {
             string name = txt_name.Text.Trim().ToLower();
-            int Isbn = Convert.ToInt32(txt_number.Text.Trim().ToLower());
-            byte price = byte.Parse(txt_price.Text.Trim());
-            Book book = new Book
+            string surname = txt_surname.Text.Trim().ToLower();
+            string bGorupNo = cmb_select.Text.Trim();
+            Student student = new Student
             {
                 Name = name,
-                IsbnNumber = Isbn,
-                BookPrice=price
+                Surname = surname,
+                GroupNo = bGorupNo
             };
-            Genre selectedGenere = cmb_genre.SelectedItem as Genre;
-            if (selectedGenere==null)
-            {
-                MessageBox.Show("please select genre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            book.GenreId = selectedGenere.Id;
-            book.Genre = selectedGenere.name;
-            books.Add(book);
-            ListBook();
+            _student.Add(student);
+            dt_grid.DataSource = _student;
         }
-        public void ListBook()
+        private void ListStudent()
         {
-            lbl_book.Items.Clear();
-            lbl_book.Items.AddRange(books.ToArray());
+            dt_grid.DataSource = cmb_select;
         }
-
-        private void Form1_Load_1(object sender, EventArgs e)
+        private void cmb_select_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmb_genre.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_filter.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_filter.Items.Add("all");
-            cmb_genre.Items.AddRange(genre.ToArray());
-            cmb_filter.Items.AddRange(genre.ToArray());
-        }
 
-
-        private void cmb_filter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Genre selected = cmb_filter.SelectedItem as Genre;
-            if (selected==null)
+            string name = cmb_select.Text.Trim();
+            foreach (Student item in _student)
             {
-                ListBook();
-            }
-            lbl_book.Items.Clear();
-            foreach (var item in books)
-            {
-                if (item.Genre==selected.ToString())
+                if (cmb_select.Text.Trim() == item.Name)
                 {
-                    lbl_book.Items.Add(item);
+                    dt_grid.DataSource = _student;
                 }
             }
+            ListStudent();
         }
 
-        private void cmb_genre_SelectedIndexChanged(object sender, EventArgs e)
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(_student,_groups);
+            form2.ShowDialog();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dt_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
