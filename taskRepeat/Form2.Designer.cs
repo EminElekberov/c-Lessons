@@ -44,13 +44,14 @@ namespace taskRepeat
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select Group";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmb_GroupDelete
             // 
             this.cmb_GroupDelete.FormattingEnabled = true;
             this.cmb_GroupDelete.Location = new System.Drawing.Point(62, 55);
             this.cmb_GroupDelete.Name = "cmb_GroupDelete";
-            this.cmb_GroupDelete.Size = new System.Drawing.Size(104, 21);
+            this.cmb_GroupDelete.Size = new System.Drawing.Size(274, 21);
             this.cmb_GroupDelete.TabIndex = 1;
             this.cmb_GroupDelete.SelectedIndexChanged += new System.EventHandler(this.cmb_GroupDelete_SelectedIndexChanged);
             // 
@@ -59,8 +60,9 @@ namespace taskRepeat
             this.cmb_StudentDelete.FormattingEnabled = true;
             this.cmb_StudentDelete.Location = new System.Drawing.Point(62, 154);
             this.cmb_StudentDelete.Name = "cmb_StudentDelete";
-            this.cmb_StudentDelete.Size = new System.Drawing.Size(104, 21);
+            this.cmb_StudentDelete.Size = new System.Drawing.Size(274, 21);
             this.cmb_StudentDelete.TabIndex = 3;
+            this.cmb_StudentDelete.SelectedIndexChanged += new System.EventHandler(this.cmb_StudentDelete_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -70,13 +72,14 @@ namespace taskRepeat
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Select Student";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(23, 246);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 67);
+            this.button1.Size = new System.Drawing.Size(333, 67);
             this.button1.TabIndex = 4;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
@@ -86,7 +89,7 @@ namespace taskRepeat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 353);
+            this.ClientSize = new System.Drawing.Size(390, 353);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmb_StudentDelete);
             this.Controls.Add(this.label2);

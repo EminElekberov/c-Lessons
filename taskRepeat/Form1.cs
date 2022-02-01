@@ -43,14 +43,10 @@ namespace taskRepeat
             string name = txt_name.Text.Trim().ToLower();
             string surname = txt_surname.Text.Trim().ToLower();
             string bGorupNo = cmb_select.Text.Trim();
-            Student student = new Student
-            {
-                Name = name,
-                Surname = surname,
-                GroupNo = bGorupNo
-            };
-            _student.Add(student);
-            dt_grid.DataSource = _student;
+            Student student = new Student(name, surname);
+            Group selectGroup = (Group)cmb_select.SelectedItem;
+            selectGroup.AddStudent(student);
+            dt_grid.DataSource = selectGroup.GetAlLStudent();
         }
         private void ListStudent()
         {
@@ -72,13 +68,14 @@ namespace taskRepeat
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(_student,_groups);
+            Form2 form2 = new Form2(_groups,cmb_select,dt_grid);
             form2.ShowDialog();
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormUpdate formUpdate = new FormUpdate(_groups, cmb_select, dt_grid);
+            formUpdate.ShowDialog();
         }
 
         private void dt_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)

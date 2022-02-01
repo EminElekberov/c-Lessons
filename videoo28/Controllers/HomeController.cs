@@ -26,6 +26,10 @@ namespace videoo28.Controllers
         {
             return View();
         }
+        public IActionResult test()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
