@@ -51,7 +51,8 @@ namespace taskRepeat
             this.updateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(686, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "delete";
             // 
@@ -72,58 +73,58 @@ namespace taskRepeat
             // cmb_select
             // 
             this.cmb_select.FormattingEnabled = true;
-            this.cmb_select.Location = new System.Drawing.Point(0, 50);
+            this.cmb_select.Location = new System.Drawing.Point(0, 43);
             this.cmb_select.Name = "cmb_select";
-            this.cmb_select.Size = new System.Drawing.Size(121, 23);
+            this.cmb_select.Size = new System.Drawing.Size(104, 21);
             this.cmb_select.TabIndex = 1;
             this.cmb_select.SelectedIndexChanged += new System.EventHandler(this.cmb_select_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 28);
+            this.label1.Location = new System.Drawing.Point(0, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Search";
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(13, 175);
+            this.txt_name.Location = new System.Drawing.Point(11, 152);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(100, 23);
+            this.txt_name.Size = new System.Drawing.Size(86, 20);
             this.txt_name.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 145);
+            this.label2.Location = new System.Drawing.Point(11, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(183, 145);
+            this.label3.Location = new System.Drawing.Point(157, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 15);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Surname";
             // 
             // txt_surname
             // 
-            this.txt_surname.Location = new System.Drawing.Point(183, 175);
+            this.txt_surname.Location = new System.Drawing.Point(157, 152);
             this.txt_surname.Name = "txt_surname";
-            this.txt_surname.Size = new System.Drawing.Size(100, 23);
+            this.txt_surname.Size = new System.Drawing.Size(86, 20);
             this.txt_surname.TabIndex = 5;
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(422, 169);
+            this.btn_add.Location = new System.Drawing.Point(362, 146);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(277, 33);
+            this.btn_add.Size = new System.Drawing.Size(237, 29);
             this.btn_add.TabIndex = 7;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -131,19 +132,20 @@ namespace taskRepeat
             // 
             // dt_grid
             // 
+            this.dt_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dt_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_grid.Location = new System.Drawing.Point(13, 224);
+            this.dt_grid.Location = new System.Drawing.Point(11, 194);
             this.dt_grid.Name = "dt_grid";
             this.dt_grid.RowTemplate.Height = 25;
-            this.dt_grid.Size = new System.Drawing.Size(787, 172);
+            this.dt_grid.Size = new System.Drawing.Size(675, 149);
             this.dt_grid.TabIndex = 8;
             this.dt_grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_grid_CellContentClick);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 395);
+            this.ClientSize = new System.Drawing.Size(686, 342);
             this.Controls.Add(this.dt_grid);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.label3);

@@ -10,31 +10,27 @@ namespace taskRepeat
 {
     public partial class FormUpdate : Form
     {
-        private ComboBox _cmb;
-        private DataGridView _dgv;
-        List<Group> _groups;
-        public FormUpdate(List<Group> groups,ComboBox combo,DataGridView dtv)
+        ComboBox cmb;
+        DataGridView dgv;
+        public FormUpdate(List<Group> _groups,ComboBox combo,DataGridView data)
         {
 
             InitializeComponent();
-            _cmb = combo;
-            _groups = groups;
-            _dgv = dtv;
-            //cmb_GroupUpdate.Items.AddRange(groups.ToArray());
+            cmb = combo;
+            dgv = data;
+            cmb_GroupUpdate.Items.AddRange(_groups.ToArray());
+           
         }
 
         private void FormUpdate_Load(object sender, EventArgs e)
         {
-            foreach (var item in _groups)
-            {
-                cmb_GroupUpdate.Items.Add(item);
-            }
+           
         }
 
         private void cmb_GroupUpdate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Group select = cmb_GroupUpdate.SelectedItem as Group;
-            cmb_studentUpdate.Items.AddRange(select.GetAlLStudent().ToArray());
+            Group group = cmb_GroupUpdate.SelectedItem as Group;
+            cmb_studentUpdate.Items.AddRange(group.GetAllStudent().ToArray());
         }
 
         private void cmb_studentUpdate_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,21 +40,20 @@ namespace taskRepeat
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Group selectGroup = cmb_GroupUpdate.SelectedItem as Group;
+            string name = txt_nameUpdate.Text.Trim();
+            string surname = txt_surnameUpdate.Text.Trim();
+            Group group = cmb_GroupUpdate.SelectedItem as Group;
             Student student = cmb_studentUpdate.SelectedItem as Student;
-            string name = txt_nameUpdate.Text.Trim().ToLower();
-            string surnme = txt_surnameUpdate.Text.Trim().ToLower();
-            if (name=="" || surnme=="")
+            if (name!=null && surname!=null)
             {
-                MessageBox.Show("doldur xanalari");
-            }
-            student.Name = name;
-            student.Surname = surnme;
-            MessageBox.Show("Success");
-            if (selectGroup==_cmb.SelectedItem)
-            {
-                _dgv.DataSource = null;
-                _dgv.DataSource = selectGroup.GetAlLStudent();
+                student.Name = name;
+                student.Surname = surname;
+                if (group==cmb_GroupUpdate.SelectedItem)
+                {
+                    dgv.DataSource = null;
+                    dgv.DataSource = group.GetAllStudent();
+                }
+                MessageBox.Show("success");
             }
         }
     }

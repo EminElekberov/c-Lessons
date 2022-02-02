@@ -12,25 +12,31 @@ namespace taskRepeat
 {
     public partial class Form1 : Form
     {
-        public List<Group> _groups;
-        public List<Student> _student;
+        List<Student> _student;
+        List<Group> _groups;
         public Form1()
         {
+            InitializeComponent();
             _student = new List<Student>();
             _groups = new List<Group>();
-            InitializeComponent();
-            _groups.Add(new Group("P609"));
-            _groups.Add(new Group("P506"));
-            foreach (var item in _groups)
-            {
-                cmb_select.Items.Add(item);
-            }
-
+            Group group = new Group("P659");
+            Group group2 = new Group("P896");
+            Student s1 = new Student("Eli", "Eliyev");
+            Student s2 = new Student("Mina", "Farzali");
+            Student s3 = new Student("Xeyal", "Eliyev");
+            group.AddStudent(s1);
+            group2.AddStudent(s2);
+            group2.AddStudent(s3);
+            _groups.Add(group);
+            _groups.Add(group2);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             cmb_select.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_select.SelectedIndex = 0;
+            foreach (var item in _groups)
+            {
+                cmb_select.Items.Add(item);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,35 +46,25 @@ namespace taskRepeat
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string name = txt_name.Text.Trim().ToLower();
-            string surname = txt_surname.Text.Trim().ToLower();
-            string bGorupNo = cmb_select.Text.Trim();
+            string name = txt_name.Text.Trim();
+            string surname = txt_surname.Text.Trim();
+            Group selectGroup = cmb_select.SelectedItem as Group;
             Student student = new Student(name, surname);
-            Group selectGroup = (Group)cmb_select.SelectedItem;
             selectGroup.AddStudent(student);
-            dt_grid.DataSource = selectGroup.GetAlLStudent();
+            dt_grid.DataSource = null;
+            dt_grid.DataSource = selectGroup.GetAllStudent();
         }
         private void ListStudent()
         {
-            dt_grid.DataSource = cmb_select;
         }
         private void cmb_select_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string name = cmb_select.Text.Trim();
-            foreach (Student item in _student)
-            {
-                if (cmb_select.Text.Trim() == item.Name)
-                {
-                    dt_grid.DataSource = _student;
-                }
-            }
-            ListStudent();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(_groups,cmb_select,dt_grid);
+            Form2 form2 = new Form2(_groups, cmb_select, dt_grid);
             form2.ShowDialog();
         }
 

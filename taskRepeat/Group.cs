@@ -5,27 +5,25 @@ namespace taskRepeat
 {
     public class Group
     {
-        private static int _id = 1;
-        public String Name { get; set; }
+        public static int id = 1;
         public int Id { get; set; }
-        private List<Student> students;
-        public void DeleteStudent(Student student)
+        public string Name { get; set; }
+        public List<Student> students;
+        public Group(string nm)
         {
-            students.Remove(student);
-            
+            Name = nm;
+            Id = id;
+            id++;
+            students = new List<Student>();
         }
+        public List<Student> GetAllStudent() => students;
         public void AddStudent(Student student)
         {
             students.Add(student);
         }
-        public List<Student> GetAlLStudent() => students;
-
-        public Group(string nm)
+        public void RemoveStudent(Student student)
         {
-            Name = nm;
-            Id = _id;
-            _id++;
-            students = new List<Student>();
+            students.Remove(student);
         }
         public override string ToString()
         {
