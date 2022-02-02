@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@{
+    string[] names = new string[]
+    {
+        "samir",
+        "eli",
+        "veli",
+        "veli3"
+            };
+}
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var item in names)
+    {
+        <li>@item</li>
+    }
+</ul>
+<p>Use this page to detail your site's privacy policy.</p>
