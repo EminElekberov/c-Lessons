@@ -4,14 +4,14 @@ namespace taskRepeat
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        ///Gerekli tasarımcı değişkeni.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        ///Kullanılan tüm kaynakları temizleyin.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        ///<param name="disposing">yönetilen kaynaklar dispose edilmeliyse doğru; aksi halde yanlış.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,147 +21,138 @@ namespace taskRepeat
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form Designer üretilen kod
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Tasarımcı desteği için gerekli metot - bu metodun 
+        ///içeriğini kod düzenleyici ile değiştirmeyin.
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmb_select = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_name = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_surname = new System.Windows.Forms.TextBox();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.dt_grid = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_grid)).BeginInit();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.surname = new System.Windows.Forms.Label();
+            this.BtnLoad = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnStudentMenu = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteToolStripMenuItem,
-            this.updateToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(686, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "delete";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.deleteToolStripMenuItem.Text = "delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.updateToolStripMenuItem.Text = "update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // cmb_select
-            // 
-            this.cmb_select.FormattingEnabled = true;
-            this.cmb_select.Location = new System.Drawing.Point(0, 43);
-            this.cmb_select.Name = "cmb_select";
-            this.cmb_select.Size = new System.Drawing.Size(104, 21);
-            this.cmb_select.TabIndex = 1;
-            this.cmb_select.SelectedIndexChanged += new System.EventHandler(this.cmb_select_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 24);
+            this.label1.Location = new System.Drawing.Point(314, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Search";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
             // 
-            // txt_name
+            // txtName
             // 
-            this.txt_name.Location = new System.Drawing.Point(11, 152);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(86, 20);
-            this.txt_name.TabIndex = 3;
+            this.txtName.Location = new System.Drawing.Point(314, 66);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label2
+            // txtEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Name";
+            this.txtEmail.Location = new System.Drawing.Point(314, 212);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 3;
             // 
-            // label3
+            // Email
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(157, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Surname";
+            this.Email.AutoSize = true;
+            this.Email.Location = new System.Drawing.Point(314, 179);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(32, 13);
+            this.Email.TabIndex = 2;
+            this.Email.Text = "Email";
             // 
-            // txt_surname
+            // txtSurname
             // 
-            this.txt_surname.Location = new System.Drawing.Point(157, 152);
-            this.txt_surname.Name = "txt_surname";
-            this.txt_surname.Size = new System.Drawing.Size(86, 20);
-            this.txt_surname.TabIndex = 5;
+            this.txtSurname.Location = new System.Drawing.Point(314, 139);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.TabIndex = 5;
             // 
-            // btn_add
+            // surname
             // 
-            this.btn_add.Location = new System.Drawing.Point(362, 146);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(237, 29);
-            this.btn_add.TabIndex = 7;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            this.surname.AutoSize = true;
+            this.surname.Location = new System.Drawing.Point(314, 106);
+            this.surname.Name = "surname";
+            this.surname.Size = new System.Drawing.Size(49, 13);
+            this.surname.TabIndex = 4;
+            this.surname.Text = "Surname";
             // 
-            // dt_grid
+            // BtnLoad
             // 
-            this.dt_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dt_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_grid.Location = new System.Drawing.Point(11, 194);
-            this.dt_grid.Name = "dt_grid";
-            this.dt_grid.RowTemplate.Height = 25;
-            this.dt_grid.Size = new System.Drawing.Size(675, 149);
-            this.dt_grid.TabIndex = 8;
-            this.dt_grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_grid_CellContentClick);
+            this.BtnLoad.Location = new System.Drawing.Point(78, 247);
+            this.BtnLoad.Name = "BtnLoad";
+            this.BtnLoad.Size = new System.Drawing.Size(75, 23);
+            this.BtnLoad.TabIndex = 6;
+            this.BtnLoad.Text = "Load";
+            this.BtnLoad.UseVisualStyleBackColor = true;
+            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 206);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(317, 281);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(197, 44);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnStudentMenu
+            // 
+            this.btnStudentMenu.Location = new System.Drawing.Point(545, 23);
+            this.btnStudentMenu.Name = "btnStudentMenu";
+            this.btnStudentMenu.Size = new System.Drawing.Size(170, 23);
+            this.btnStudentMenu.TabIndex = 9;
+            this.btnStudentMenu.Text = "Student Menu";
+            this.btnStudentMenu.UseVisualStyleBackColor = true;
+            this.btnStudentMenu.Click += new System.EventHandler(this.btnStudentMenu_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 342);
-            this.Controls.Add(this.dt_grid);
-            this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_surname);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_name);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(754, 409);
+            this.Controls.Add(this.btnStudentMenu);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.BtnLoad);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.surname);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmb_select);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,17 +160,17 @@ namespace taskRepeat
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ComboBox cmb_select;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_surname;
-        private System.Windows.Forms.Button btn_add;
-        public System.Windows.Forms.DataGridView dt_grid;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label surname;
+        private System.Windows.Forms.Button BtnLoad;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnStudentMenu;
     }
 }
 

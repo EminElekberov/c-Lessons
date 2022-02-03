@@ -12,69 +12,76 @@ namespace taskRepeat
 {
     public partial class Form1 : Form
     {
-        List<Student> _student;
-        List<Group> _groups;
+        public List<Student> _students;
+        public List<string> img;
         public Form1()
         {
             InitializeComponent();
-            _student = new List<Student>();
-            _groups = new List<Group>();
-            Group group = new Group("P659");
-            Group group2 = new Group("P896");
-            Student s1 = new Student("Eli", "Eliyev");
-            Student s2 = new Student("Mina", "Farzali");
-            Student s3 = new Student("Xeyal", "Eliyev");
-            group.AddStudent(s1);
-            group2.AddStudent(s2);
-            group2.AddStudent(s3);
-            _groups.Add(group);
-            _groups.Add(group2);
+            _students = new List<Student>();
+            img = new List<string>();
         }
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            cmb_select.DropDownStyle = ComboBoxStyle.DropDownList;
-            foreach (var item in _groups)
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text.Trim();
+            string surname = txtSurname.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string img_loctaion;
+            try
             {
-                cmb_select.Items.Add(item);
+                img_loctaion = img[0];
+                Student st = new Student
+                {
+                    Name = name,
+                    Surname = surname,
+                    Email = email,
+                    imgFile = img_loctaion
+                };
+                _students.Add(st);
+                pictureBox1.Image = null;
+                MessageBox.Show("Success");
+                txtEmail.Clear();
+                txtName.Clear();
+                txtSurname.Clear();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        private void BtnLoad_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = openFileDialog1.ShowDialog();
+            if (dialog==DialogResult.OK)
+            {
+                if (img.Count != 0)
+                {
+                    img.Clear();
+                }
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox1.Load(openFileDialog1.FileName);
+                img.Add(openFileDialog1.FileName);
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnStudentMenu_Click(object sender, EventArgs e)
+        {
+            StudentMenu studentMenu = new StudentMenu(_students);
+            studentMenu.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            string name = txt_name.Text.Trim();
-            string surname = txt_surname.Text.Trim();
-            Group selectGroup = cmb_select.SelectedItem as Group;
-            Student student = new Student(name, surname);
-            selectGroup.AddStudent(student);
-            dt_grid.DataSource = null;
-            dt_grid.DataSource = selectGroup.GetAllStudent();
-        }
-        private void ListStudent()
-        {
-        }
-        private void cmb_select_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2(_groups, cmb_select, dt_grid);
-            form2.ShowDialog();
-        }
-
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormUpdate formUpdate = new FormUpdate(_groups, cmb_select, dt_grid);
-            formUpdate.ShowDialog();
-        }
-
-        private void dt_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

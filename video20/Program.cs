@@ -29,7 +29,7 @@ namespace video20
             }
             Console.WriteLine("-----------");
             var type2 =typeof(Student); 
-            Console.WriteLine("typeof "+type2.FullName);
+            Console.WriteLine("typeof "+type2.GetMethods().Length);
             Console.ReadLine();
         }
     }
