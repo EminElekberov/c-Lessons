@@ -1,53 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Configuration;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace taskRepeat
 {
     public partial class Form1 : Form
     {
-        public List<Student> _students;
-        public List<string> img;
         public Form1()
         {
             InitializeComponent();
-            _students = new List<Student>();
-            img = new List<string>();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+            #region
+            //string conn = ConfigurationManager.ConnectionStrings["FirstRegisterApi"].ConnectionString;
+            //SqlConnection sqlConnection = null;
+            //SqlCommand sqlCommand = null;
+            //SqlDataReader sqlDataReader = null;
+            //try
+            //{
+            //    sqlConnection = new SqlConnection(conn);
+            //    sqlConnection.Open();
+            //    string query = "select * from tbl_login where Username='" + txtFullName.Text.Trim() + "'and Password='" + txtPassword.Text.Trim() + "'";
+            //    sqlCommand = new SqlCommand(query, sqlConnection);
+            //}
+            //catch (Exception)
+            //{
 
+            //    throw;
+            //}
+            #endregion
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        //Access Method
+        private void btnAccess_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text.Trim();
-            string surname = txtSurname.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string img_loctaion;
+            string conn = ConfigurationManager.ConnectionStrings["dbo"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            SqlCommand sqlCommand = null;
+            SqlDataReader sqlDataReader = null;
             try
             {
-                img_loctaion = img[0];
-                Student st = new Student
+                sqlConnection = new SqlConnection(conn);
+                sqlConnection.Open();
+                string query = "select * from tbl_login where Username= '" + txtFullName.Text.Trim() + "'and Password='" + txtPassword.Text.Trim() + "'";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                if (dataTable.Rows.Count==1)
                 {
-                    Name = name,
-                    Surname = surname,
-                    Email = email,
-                    imgFile = img_loctaion
-                };
-                _students.Add(st);
-                pictureBox1.Image = null;
-                MessageBox.Show("Success");
-                txtEmail.Clear();
-                txtName.Clear();
-                txtSurname.Clear();
+                    frmMain frm = new frmMain();
+                    Hide();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("This name is not person. Please register.");
+                }
             }
             catch (Exception)
             {
@@ -55,35 +67,11 @@ namespace taskRepeat
                 throw;
             }
         }
-        private void BtnLoad_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = openFileDialog1.ShowDialog();
-            if (dialog==DialogResult.OK)
-            {
-                if (img.Count != 0)
-                {
-                    img.Clear();
-                }
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBox1.Load(openFileDialog1.FileName);
-                img.Add(openFileDialog1.FileName);
-            }
-        }
-
-        private void btnStudentMenu_Click(object sender, EventArgs e)
-        {
-            StudentMenu studentMenu = new StudentMenu(_students);
-            studentMenu.ShowDialog();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            AccountCreate accountCreate = new AccountCreate();
+            accountCreate.ShowDialog();
         }
     }
 }
