@@ -108,6 +108,7 @@ namespace LibraryApi
             _db.SaveChanges();
             ClearArea();
         }
+        //
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -138,7 +139,7 @@ namespace LibraryApi
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            _db.SaveChanges();
+            //_db.SaveChanges();
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
