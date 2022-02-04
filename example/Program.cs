@@ -10,6 +10,7 @@ namespace example
         static void Main(string[] args)
         {
             #region
+            #region
 
             //Book book = new Book
             //{
@@ -104,13 +105,13 @@ namespace example
             //Console.WriteLine(y);
 
             //ArrayMAx Element
-            int[] numbers = { 14, 8, 96, 35, 6, 1, 3 };
-            int small = numbers[0];
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] > small) small = numbers[i];
-            }
-            Console.WriteLine(small);
+            //int[] numbers = { 14, 8, 96, 35, 6, 1, 3 };
+            //int small = numbers[0];
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] > small) small = numbers[i];
+            //}
+            //Console.WriteLine(small);
 
 
             //int[] array = { 1, 2, 3, 4,10, 5, 6, 7, 8, 9 };
@@ -119,6 +120,33 @@ namespace example
             #endregion
 
 
+            #endregion
+            //var member = new Member()
+            //{
+            //    Id = 10,
+            //    Title = "John Wick",
+            //    Director = "Chad Stahelski",
+            //    ReleasedOn = DateTime.Parse("2014/10/24"),
+            //    BoxOfficeRevenue = 86_000_000
+            //};
+            //var directorProperty = member.GetType().GetProperty("Director");
+            //directorProperty.SetValue(member, "Stahelski");
+
+            //Console.WriteLine(directorProperty.Name);
+
+            Member member = new Member();
+            member.age=21;
+            var properties = member.GetType().GetFields();
+            int index = -1;
+            for (int i = 0; i < properties.Length; i++)
+            {
+                if (properties[i].Name=="age")
+                {
+                    index = i;
+                }
+            }
+            Console.WriteLine("next"+properties[index+1].Name);
+            Console.WriteLine("next"+properties[index-1].Name);
 
         }
         #region recursive
@@ -133,6 +161,15 @@ namespace example
         //    }
         //}
         #endregion
+    }
+    public class Member
+    {
+        public string Title;
+        public int age;
+
+        public string Director;
+        public DateTime ReleasedOn;
+        public long BoxOfficeRevenue;
     }
 }
 #region

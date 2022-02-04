@@ -14,8 +14,13 @@ namespace video20
             Console.WriteLine("-----------");
             foreach (var item in type.GetProperties())
             {
+                if (item.PropertyType== lastName)
+                {
+
+                }
                 Console.WriteLine(item);
             }
+            
             Console.WriteLine("-----------");
 
             foreach (MemberInfo item in type.GetMembers())
@@ -31,6 +36,10 @@ namespace video20
             var type2 =typeof(Student); 
             Console.WriteLine("typeof "+type2.GetMethods().Length);
             Console.ReadLine();
+        }
+        public static object GetPropValue(object src, string propName)
+        {
+            return src.GetType().GetProperty(propName).GetValue(src, null);
         }
     }
     class Student
