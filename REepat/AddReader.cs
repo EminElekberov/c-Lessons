@@ -89,7 +89,7 @@ namespace REepat
             datagridrefresh();
             cleartxt();
         }
-
+        //
         private void AddReader_Load(object sender, EventArgs e)
         {
             datagridrefresh();
