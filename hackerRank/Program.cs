@@ -7,6 +7,7 @@ namespace hackerRank
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("--------------");
             #region
             // static List<int> compareTriplets(List<int> a, List<int> b)
             //{

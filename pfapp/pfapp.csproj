@@ -1,0 +1,1583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37326324-0DCB-46CA-B61B-EA9D76174C17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pfapp</RootNamespace>
+    <AssemblyName>pfapp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryAdd.Designer.cs">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryCreate.Designer.cs">
+      <DependentUpon>CategoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryRemove.Designer.cs">
+      <DependentUpon>CategoryRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\SalePriceLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\SalePriceLists.Designer.cs">
+      <DependentUpon>SalePriceLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Common\ParfumMessenge.cs" />
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ActiveUserTable.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Brend.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\CategoryListParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\CategoryToParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Catogory.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\DeleteHeader.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\DeleteSalePirceUI.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\DeleteUpdateCategoryToParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\DeleteUpdateHeader.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Density.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\FullDetailParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Gender.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\MidDetalParfume.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\MidDetalParfumeForUpdate.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context.cs" />
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.cs" />
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Designer.cs">
+      <DependentUpon>ParfumDBFirstModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Parfume.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumLoginUser.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Sale.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SaleActivity.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SaleActivity1.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SaleActivityMonitor.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SaleActivitysIsUser.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SaleDetailParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SalePirceUI.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SalePrice.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\SearchHead.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\Size.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\sysdiagram.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\User.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\usp_SaleShowCategoryParfums_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\usp_SelectIdSalePirce_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\DataModelMsSql\usp_ShowCategoryParfums_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Load\LoadCommonData.cs" />
+    <Compile Include="AdminPanel\ParfumUI\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="AdminPanel\ParfumUI\ParfumHeader.cs" />
+    <Compile Include="AdminPanel\ParfumUI\Parfum\Brend\BrendAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\Brend\BrendAdd.Designer.cs">
+      <DependentUpon>BrendAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\Brend\BrendUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\Brend\BrendUpdateDelete.Designer.cs">
+      <DependentUpon>BrendUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\Parfum Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\Parfum Function.Designer.cs">
+      <DependentUpon>Parfum Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\ParfumeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Parfum\ParfumeUpdate.Designer.cs">
+      <DependentUpon>ParfumeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Program.cs" />
+    <Compile Include="AdminPanel\ParfumUI\Properties\AssemblyInfo.cs" />
+    <Compile Include="AdminPanel\ParfumUI\Properties\Resources.Designer.cs" />
+    <Compile Include="AdminPanel\ParfumUI\Properties\Settings.Designer.cs" />
+    <Compile Include="AdminPanel\ParfumUI\RefresData.cs" />
+    <Compile Include="AdminPanel\ParfumUI\SalePriceFolder\SalePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\SalePriceFolder\SalePrice.Designer.cs">
+      <DependentUpon>SalePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\SalePriceFolder\Volume\VolumeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\SalePriceFolder\Volume\VolumeAdd.Designer.cs">
+      <DependentUpon>VolumeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\SinginParfumApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\SinginParfumApp.Designer.cs">
+      <DependentUpon>SinginParfumApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Users\Cryptography.cs" />
+    <Compile Include="AdminPanel\ParfumUI\Users\UserActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Users\UserActivity.Designer.cs">
+      <DependentUpon>UserActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Users\UserActivityMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Users\UserActivityMonitor.Designer.cs">
+      <DependentUpon>UserActivityMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Users\UserSaleMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParfumUI\Users\UserSaleMonitor.Designer.cs">
+      <DependentUpon>UserSaleMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\CatogoryView\CategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\CatogoryView\CategoryAdd.Designer.cs">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\CatogoryView\CategoryRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\CatogoryView\CategoryRemove.Designer.cs">
+      <DependentUpon>CategoryRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\CatogoryView\SalePriceLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\CatogoryView\SalePriceLists.Designer.cs">
+      <DependentUpon>SalePriceLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Common\ParfumMessenge.cs" />
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ActiveUserTable.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Brend.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\CategoryListParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\CategoryToParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Catogory.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\DeleteHeader.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\DeleteSalePirceUI.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\DeleteUpdateCategoryToParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\DeleteUpdateHeader.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Density.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\FullDetailParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Gender.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\MidDetalParfume.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\MidDetalParfumeForUpdate.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context.cs" />
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.cs" />
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Designer.cs">
+      <DependentUpon>ParfumDBFirstModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Parfume.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\ParfumLoginUser.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Sale.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SaleActivity.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SaleActivity1.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SaleActivityMonitor.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SaleActivitysIsUser.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SaleDetailParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SalePirceUI.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SalePrice.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\SearchHead.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\Size.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\sysdiagram.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\User.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\usp_SaleShowCategoryParfums_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\usp_SelectIdSalePirce_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\DataModelMsSql\usp_ShowCategoryParfums_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Load\LoadCommonData.cs" />
+    <Compile Include="Employee\ParfumUI\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Employee\ParfumUI\ParfumHeader.cs" />
+    <Compile Include="Employee\ParfumUI\Parfum\Brend\BrendAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Parfum\Brend\BrendAdd.Designer.cs">
+      <DependentUpon>BrendAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Parfum\Parfum Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Parfum\Parfum Function.Designer.cs">
+      <DependentUpon>Parfum Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Parfum\ParfumeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Parfum\ParfumeUpdate.Designer.cs">
+      <DependentUpon>ParfumeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Program.cs" />
+    <Compile Include="Employee\ParfumUI\Properties\AssemblyInfo.cs" />
+    <Compile Include="Employee\ParfumUI\Properties\Resources.Designer.cs" />
+    <Compile Include="Employee\ParfumUI\Properties\Settings.Designer.cs" />
+    <Compile Include="Employee\ParfumUI\RefresData.cs" />
+    <Compile Include="Employee\ParfumUI\SalePriceFolder\SalePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SalePriceFolder\SalePrice.Designer.cs">
+      <DependentUpon>SalePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SalePriceFolder\Volume\VolumeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SalePriceFolder\Volume\VolumeAdd.Designer.cs">
+      <DependentUpon>VolumeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SinginParfum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SinginParfum.Designer.cs">
+      <DependentUpon>SinginParfum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SingUpParfum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\SingUpParfum.Designer.cs">
+      <DependentUpon>SingUpParfum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Users\Cryptography.cs" />
+    <Compile Include="Employee\ParfumUI\Users\UserActivityMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Users\UserActivityMonitor.Designer.cs">
+      <DependentUpon>UserActivityMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Users\UserSaleMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ParfumUI\Users\UserSaleMonitor.Designer.cs">
+      <DependentUpon>UserSaleMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\ParfumUI\CatogoryView\SalePriceLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ParfumUI\CatogoryView\SalePriceLists.Designer.cs">
+      <DependentUpon>SalePriceLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Common\ParfumMessenge.cs" />
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ActiveUserTable.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Brend.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\CategoryListParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\CategoryToParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Catogory.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\DeleteHeader.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\DeleteSalePirceUI.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\DeleteUpdateCategoryToParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\DeleteUpdateHeader.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Density.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\FullDetailParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Gender.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\MidDetalParfume.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\MidDetalParfumeForUpdate.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context.cs" />
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.cs" />
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Designer.cs">
+      <DependentUpon>ParfumDBFirstModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParfumDBFirstModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Parfume.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\ParfumLoginUser.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Sale.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SaleActivity.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SaleActivity1.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SaleActivityMonitor.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SaleActivitysIsUser.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SaleDetailParfum.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SalePirceUI.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SalePrice.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\SearchHead.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\Size.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\sysdiagram.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\User.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\usp_SaleShowCategoryParfums_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\usp_SelectIdSalePirce_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\DataModelMsSql\usp_ShowCategoryParfums_Result.cs">
+      <DependentUpon>ParfumDBFirstModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Load\LoadCommonData.cs" />
+    <Compile Include="Users\ParfumUI\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Users\ParfumUI\ParfumHeader.cs" />
+    <Compile Include="Users\ParfumUI\Parfum\Parfum Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Parfum\Parfum Function.Designer.cs">
+      <DependentUpon>Parfum Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Program.cs" />
+    <Compile Include="Users\ParfumUI\Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\ParfumUI\Properties\Resources.Designer.cs" />
+    <Compile Include="Users\ParfumUI\Properties\Settings.Designer.cs" />
+    <Compile Include="Users\ParfumUI\RefresData.cs" />
+    <Compile Include="Users\ParfumUI\SinginParfum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ParfumUI\SinginParfum.Designer.cs">
+      <DependentUpon>SinginParfum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\SingUpParfum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ParfumUI\SingUpParfum.Designer.cs">
+      <DependentUpon>SingUpParfum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Users\Cryptography.cs" />
+    <Compile Include="Users\ParfumUI\Users\UserActivityMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Users\UserActivityMonitor.Designer.cs">
+      <DependentUpon>UserActivityMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Users\UserSaleMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ParfumUI\Users\UserSaleMonitor.Designer.cs">
+      <DependentUpon>UserSaleMonitor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\CatogoryView\CategoryAdd.resx">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\CatogoryView\CategoryCreate.resx">
+      <DependentUpon>CategoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\CatogoryView\CategoryRemove.resx">
+      <DependentUpon>CategoryRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\CatogoryView\SalePriceLists.resx">
+      <DependentUpon>SalePriceLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.BrendAdd.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryAdd.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryCreate.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryRemove.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.CatogoryView.SalePriceLists.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.Parfum.Brend.BrendUpdateDelete.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.ParfumeUpdate.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.Parfum_Function.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.Properties.Resources.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.SalePrice.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.SalePriceFolder.Volume.VolumeAdd.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.SinginParfumApp.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.Users.UserActivity.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.Users.UserActivityMonitor.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.Users.UserSaleMonitor.resources" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Parfum\Brend\BrendAdd.resx">
+      <DependentUpon>BrendAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Parfum\Brend\BrendUpdateDelete.resx">
+      <DependentUpon>BrendUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Parfum\Parfum Function.resx">
+      <DependentUpon>Parfum Function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Parfum\ParfumeUpdate.resx">
+      <DependentUpon>ParfumeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Properties\Resources.resx" />
+    <EmbeddedResource Include="AdminPanel\ParfumUI\SalePriceFolder\SalePrice.resx">
+      <DependentUpon>SalePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\SalePriceFolder\Volume\VolumeAdd.resx">
+      <DependentUpon>VolumeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\SinginParfumApp.resx">
+      <DependentUpon>SinginParfumApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Users\UserActivity.resx">
+      <DependentUpon>UserActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Users\UserActivityMonitor.resx">
+      <DependentUpon>UserActivityMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ParfumUI\Users\UserSaleMonitor.resx">
+      <DependentUpon>UserSaleMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\CatogoryView\CategoryAdd.resx">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\CatogoryView\CategoryRemove.resx">
+      <DependentUpon>CategoryRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\CatogoryView\SalePriceLists.resx">
+      <DependentUpon>SalePriceLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.BrendAdd.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryAdd.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryRemove.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.CatogoryView.SalePriceLists.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.ParfumeUpdate.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.Parfum_Function.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.Properties.Resources.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.SalePrice.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.SalePriceFolder.Volume.VolumeAdd.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.SinginParfum.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.SingUpParfum.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.Users.UserActivityMonitor.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\obj\Debug\ParfumUI.Users.UserSaleMonitor.resources" />
+    <EmbeddedResource Include="Employee\ParfumUI\Parfum\Brend\BrendAdd.resx">
+      <DependentUpon>BrendAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\Parfum\Parfum Function.resx">
+      <DependentUpon>Parfum Function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\Parfum\ParfumeUpdate.resx">
+      <DependentUpon>ParfumeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\Properties\Resources.resx" />
+    <EmbeddedResource Include="Employee\ParfumUI\SalePriceFolder\SalePrice.resx">
+      <DependentUpon>SalePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\SalePriceFolder\Volume\VolumeAdd.resx">
+      <DependentUpon>VolumeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\SinginParfum.resx">
+      <DependentUpon>SinginParfum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\SingUpParfum.resx">
+      <DependentUpon>SingUpParfum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\Users\UserActivityMonitor.resx">
+      <DependentUpon>UserActivityMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\ParfumUI\Users\UserSaleMonitor.resx">
+      <DependentUpon>UserSaleMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Users\ParfumUI\CatogoryView\SalePriceLists.resx">
+      <DependentUpon>SalePriceLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.BrendAdd.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryAdd.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.CatogoryView.CategoryRemove.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.CatogoryView.SalePriceLists.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.ParfumeUpdate.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.Parfum_Function.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.Properties.Resources.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.SalePrice.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.SalePriceFolder.Volume.VolumeAdd.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.SinginParfum.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.SingUpParfum.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.Users.UserActivityMonitor.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\obj\Debug\ParfumUI.Users.UserSaleMonitor.resources" />
+    <EmbeddedResource Include="Users\ParfumUI\Parfum\Parfum Function.resx">
+      <DependentUpon>Parfum Function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ParfumUI\Properties\Resources.resx" />
+    <EmbeddedResource Include="Users\ParfumUI\SinginParfum.resx">
+      <DependentUpon>SinginParfum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ParfumUI\SingUpParfum.resx">
+      <DependentUpon>SingUpParfum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ParfumUI\Users\UserActivityMonitor.resx">
+      <DependentUpon>UserActivityMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ParfumUI\Users\UserSaleMonitor.resx">
+      <DependentUpon>UserSaleMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AdminPanel\.vs\ParfumUI\v16\.suo" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\.signature.p7s" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\content\net40\App.config.transform" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\content\net40\Web.config.transform" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\EntityFramework.6.2.0.nupkg" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\tools\EntityFramework.psd1" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\tools\EntityFramework.psm1" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\tools\init.ps1" />
+    <None Include="AdminPanel\packages\EntityFramework.6.2.0\tools\install.ps1" />
+    <None Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\.signature.p7s" />
+    <None Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\buildTransitive\netcoreapp2.0\System.Configuration.ConfigurationManager.targets" />
+    <None Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\System.Configuration.ConfigurationManager.6.0.0.nupkg" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\.signature.p7s" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\MonoAndroid10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\MonoTouch10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\xamarinios10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\xamarinmac20\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\xamarintvos10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\xamarinwatchos10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\MonoAndroid10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\MonoTouch10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\xamarinios10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\xamarinmac20\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\xamarintvos10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\xamarinwatchos10\_._" />
+    <None Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\System.Data.SqlClient.4.8.3.nupkg" />
+    <None Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\.signature.p7s" />
+    <None Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\buildTransitive\netcoreapp2.0\System.Security.AccessControl.targets" />
+    <None Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\System.Security.AccessControl.6.0.0.nupkg" />
+    <None Include="AdminPanel\packages\System.Security.Permissions.6.0.0\.signature.p7s" />
+    <None Include="AdminPanel\packages\System.Security.Permissions.6.0.0\buildTransitive\netcoreapp2.0\System.Security.Permissions.targets" />
+    <None Include="AdminPanel\packages\System.Security.Permissions.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="AdminPanel\packages\System.Security.Permissions.6.0.0\System.Security.Permissions.6.0.0.nupkg" />
+    <None Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\.signature.p7s" />
+    <None Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\uap10.0.16299\_._" />
+    <None Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\uap10.0.16299\_._" />
+    <None Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\uap10.0.16299\_._" />
+    <None Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\System.Security.Principal.Windows.5.0.0.nupkg" />
+    <None Include="AdminPanel\ParfumUI\App.config" />
+    <None Include="AdminPanel\ParfumUI\bin\Debug\ParfumUI.exe.config" />
+    <EntityDeploy Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.edmx.diagram">
+      <DependentUpon>ParfumDBFirstModel.edmx</DependentUpon>
+    </None>
+    <None Include="AdminPanel\ParfumUI\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.csdl" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.msl" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.ssdl" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.csproj.AssemblyReference.cache" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.csproj.CopyComplete" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.csproj.CoreCompileInputs.cache" />
+    <None Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.csproj.GenerateResource.cache" />
+    <None Include="AdminPanel\ParfumUI\packages.config" />
+    <None Include="AdminPanel\ParfumUI\ParfumUI.csproj" />
+    <None Include="AdminPanel\ParfumUI\Properties\Settings.settings" />
+    <None Include="Employee\.vs\ParfumUI\v16\.suo" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\.signature.p7s" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\content\net40\App.config.transform" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\content\net40\Web.config.transform" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\EntityFramework.6.2.0.nupkg" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\tools\EntityFramework.psd1" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\tools\EntityFramework.psm1" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\tools\init.ps1" />
+    <None Include="Employee\packages\EntityFramework.6.2.0\tools\install.ps1" />
+    <None Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\.signature.p7s" />
+    <None Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\buildTransitive\netcoreapp2.0\System.Configuration.ConfigurationManager.targets" />
+    <None Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\System.Configuration.ConfigurationManager.6.0.0.nupkg" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\.signature.p7s" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\MonoAndroid10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\MonoTouch10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\xamarinios10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\xamarinmac20\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\xamarintvos10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\xamarinwatchos10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\MonoAndroid10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\MonoTouch10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\xamarinios10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\xamarinmac20\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\xamarintvos10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\xamarinwatchos10\_._" />
+    <None Include="Employee\packages\System.Data.SqlClient.4.8.3\System.Data.SqlClient.4.8.3.nupkg" />
+    <None Include="Employee\packages\System.Security.AccessControl.6.0.0\.signature.p7s" />
+    <None Include="Employee\packages\System.Security.AccessControl.6.0.0\buildTransitive\netcoreapp2.0\System.Security.AccessControl.targets" />
+    <None Include="Employee\packages\System.Security.AccessControl.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="Employee\packages\System.Security.AccessControl.6.0.0\System.Security.AccessControl.6.0.0.nupkg" />
+    <None Include="Employee\packages\System.Security.Permissions.6.0.0\.signature.p7s" />
+    <None Include="Employee\packages\System.Security.Permissions.6.0.0\buildTransitive\netcoreapp2.0\System.Security.Permissions.targets" />
+    <None Include="Employee\packages\System.Security.Permissions.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="Employee\packages\System.Security.Permissions.6.0.0\System.Security.Permissions.6.0.0.nupkg" />
+    <None Include="Employee\packages\System.Security.Principal.Windows.5.0.0\.signature.p7s" />
+    <None Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\uap10.0.16299\_._" />
+    <None Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\uap10.0.16299\_._" />
+    <None Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\uap10.0.16299\_._" />
+    <None Include="Employee\packages\System.Security.Principal.Windows.5.0.0\System.Security.Principal.Windows.5.0.0.nupkg" />
+    <None Include="Employee\ParfumUI\App.config" />
+    <None Include="Employee\ParfumUI\bin\Debug\ParfumUI.exe.config" />
+    <EntityDeploy Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.edmx.diagram">
+      <DependentUpon>ParfumDBFirstModel.edmx</DependentUpon>
+    </None>
+    <None Include="Employee\ParfumUI\EmloyeeParfum.csproj" />
+    <None Include="Employee\ParfumUI\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.csdl" />
+    <None Include="Employee\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.msl" />
+    <None Include="Employee\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.ssdl" />
+    <None Include="Employee\ParfumUI\obj\Debug\EmloyeeParfum.csproj.AssemblyReference.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\EmloyeeParfum.csproj.CopyComplete" />
+    <None Include="Employee\ParfumUI\obj\Debug\EmloyeeParfum.csproj.CoreCompileInputs.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\EmloyeeParfum.csproj.GenerateResource.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\ParfumUI.csproj.AssemblyReference.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\ParfumUI.csproj.CopyComplete" />
+    <None Include="Employee\ParfumUI\obj\Debug\ParfumUI.csproj.CoreCompileInputs.cache" />
+    <None Include="Employee\ParfumUI\obj\Debug\ParfumUI.csproj.GenerateResource.cache" />
+    <None Include="Employee\ParfumUI\packages.config" />
+    <None Include="Employee\ParfumUI\Properties\Settings.settings" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Users\.vs\ParfumUI\v16\.suo" />
+    <None Include="Users\packages\EntityFramework.6.2.0\.signature.p7s" />
+    <None Include="Users\packages\EntityFramework.6.2.0\content\net40\App.config.transform" />
+    <None Include="Users\packages\EntityFramework.6.2.0\content\net40\Web.config.transform" />
+    <None Include="Users\packages\EntityFramework.6.2.0\EntityFramework.6.2.0.nupkg" />
+    <None Include="Users\packages\EntityFramework.6.2.0\tools\EntityFramework.psd1" />
+    <None Include="Users\packages\EntityFramework.6.2.0\tools\EntityFramework.psm1" />
+    <None Include="Users\packages\EntityFramework.6.2.0\tools\init.ps1" />
+    <None Include="Users\packages\EntityFramework.6.2.0\tools\install.ps1" />
+    <None Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\.signature.p7s" />
+    <None Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\buildTransitive\netcoreapp2.0\System.Configuration.ConfigurationManager.targets" />
+    <None Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\System.Configuration.ConfigurationManager.6.0.0.nupkg" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\.signature.p7s" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\lib\MonoAndroid10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\lib\MonoTouch10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\lib\xamarinios10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\lib\xamarinmac20\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\lib\xamarintvos10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\lib\xamarinwatchos10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\ref\MonoAndroid10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\ref\MonoTouch10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\ref\xamarinios10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\ref\xamarinmac20\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\ref\xamarintvos10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\ref\xamarinwatchos10\_._" />
+    <None Include="Users\packages\System.Data.SqlClient.4.8.3\System.Data.SqlClient.4.8.3.nupkg" />
+    <None Include="Users\packages\System.Security.AccessControl.6.0.0\.signature.p7s" />
+    <None Include="Users\packages\System.Security.AccessControl.6.0.0\buildTransitive\netcoreapp2.0\System.Security.AccessControl.targets" />
+    <None Include="Users\packages\System.Security.AccessControl.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="Users\packages\System.Security.AccessControl.6.0.0\System.Security.AccessControl.6.0.0.nupkg" />
+    <None Include="Users\packages\System.Security.Permissions.6.0.0\.signature.p7s" />
+    <None Include="Users\packages\System.Security.Permissions.6.0.0\buildTransitive\netcoreapp2.0\System.Security.Permissions.targets" />
+    <None Include="Users\packages\System.Security.Permissions.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <None Include="Users\packages\System.Security.Permissions.6.0.0\System.Security.Permissions.6.0.0.nupkg" />
+    <None Include="Users\packages\System.Security.Principal.Windows.5.0.0\.signature.p7s" />
+    <None Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\uap10.0.16299\_._" />
+    <None Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\uap10.0.16299\_._" />
+    <None Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\uap10.0.16299\_._" />
+    <None Include="Users\packages\System.Security.Principal.Windows.5.0.0\System.Security.Principal.Windows.5.0.0.nupkg" />
+    <None Include="Users\ParfumUI\App.config" />
+    <None Include="Users\ParfumUI\bin\Debug\ParfumUI.exe.config" />
+    <EntityDeploy Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.edmx.diagram">
+      <DependentUpon>ParfumDBFirstModel.edmx</DependentUpon>
+    </None>
+    <None Include="Users\ParfumUI\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.csdl" />
+    <None Include="Users\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.msl" />
+    <None Include="Users\ParfumUI\obj\Debug\edmxResourcesToEmbed\DataModelMsSql\ParfumDBFirstModel.ssdl" />
+    <None Include="Users\ParfumUI\obj\Debug\EmloyeeParfum.csproj.AssemblyReference.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\EmloyeeParfum.csproj.CopyComplete" />
+    <None Include="Users\ParfumUI\obj\Debug\EmloyeeParfum.csproj.CoreCompileInputs.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\EmloyeeParfum.csproj.GenerateResource.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\ParfumUI.csproj.AssemblyReference.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\ParfumUI.csproj.CopyComplete" />
+    <None Include="Users\ParfumUI\obj\Debug\ParfumUI.csproj.CoreCompileInputs.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\ParfumUI.csproj.GenerateResource.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\Users.csproj.AssemblyReference.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\Users.csproj.CopyComplete" />
+    <None Include="Users\ParfumUI\obj\Debug\Users.csproj.CoreCompileInputs.cache" />
+    <None Include="Users\ParfumUI\obj\Debug\Users.csproj.GenerateResource.cache" />
+    <None Include="Users\ParfumUI\packages.config" />
+    <None Include="Users\ParfumUI\Properties\Settings.settings" />
+    <None Include="Users\ParfumUI\Users.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.xml" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="AdminPanel\packages\EntityFramework.6.2.0\tools\migrate.exe" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\Icon.png" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net6.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net6.0\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\LICENSE.TXT" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\runtimes\win\lib\net461\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\runtimes\win\lib\net461\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="AdminPanel\packages\System.Configuration.ConfigurationManager.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\Icon.png" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\LICENSE.TXT" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\net451\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\net46\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\de\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\es\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\fr\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\it\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ja\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ko\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ru\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\de\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\es\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\fr\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\it\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ja\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ko\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ru\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\useSharedDesignerContext.txt" />
+    <Content Include="AdminPanel\packages\System.Data.SqlClient.4.8.3\version.txt" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\Icon.png" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\lib\net6.0\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\lib\net6.0\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\lib\netstandard2.0\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\lib\netstandard2.0\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\LICENSE.TXT" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net461\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net461\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net6.0\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net6.0\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="AdminPanel\packages\System.Security.AccessControl.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\Icon.png" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\net5.0\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\net5.0\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\net6.0\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\net6.0\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\netcoreapp3.1\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\netcoreapp3.1\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\netstandard2.0\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\lib\netstandard2.0\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\LICENSE.TXT" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\runtimes\win\lib\net461\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\runtimes\win\lib\net461\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="AdminPanel\packages\System.Security.Permissions.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\Icon.png" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\LICENSE.TXT" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\de\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\es\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\fr\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\it\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ja\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ko\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ru\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\zh-hans\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\zh-hant\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\useSharedDesignerContext.txt" />
+    <Content Include="AdminPanel\packages\System.Security.Principal.Windows.5.0.0\version.txt" />
+    <Content Include="AdminPanel\ParfumUI.sln" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\EntityFramework.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\EntityFramework.xml" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\ParfumUI.exe" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\ParfumUI.pdb" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Data.SqlClient.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Data.SqlClient.xml" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Security.AccessControl.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Security.Permissions.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Security.Principal.Windows.dll" />
+    <Content Include="AdminPanel\ParfumUI\bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdminPanel\ParfumUI\DataModelMsSql\ParfumDBFirstModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel1.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.csproj.FileListAbsolute.txt" />
+    <Content Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.exe" />
+    <Content Include="AdminPanel\ParfumUI\obj\Debug\ParfumUI.pdb" />
+    <Content Include="AdminPanel\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.Context.cs.dll" />
+    <Content Include="AdminPanel\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.cs.dll" />
+    <Content Include="AdminPanel\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.Designer.cs.dll" />
+    <Content Include="AdminPanel\ParfumUI\ParfumUI.csproj.user" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.xml" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="Employee\packages\EntityFramework.6.2.0\tools\migrate.exe" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\Icon.png" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net6.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net6.0\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\LICENSE.TXT" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\runtimes\win\lib\net461\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\runtimes\win\lib\net461\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Employee\packages\System.Configuration.ConfigurationManager.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\Icon.png" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\LICENSE.TXT" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\net451\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\net46\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\de\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\es\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\fr\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\it\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ja\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ko\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ru\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\de\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\es\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\fr\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\it\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ja\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ko\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ru\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.xml" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\useSharedDesignerContext.txt" />
+    <Content Include="Employee\packages\System.Data.SqlClient.4.8.3\version.txt" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\Icon.png" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.xml" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\lib\net6.0\System.Security.AccessControl.dll" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\lib\net6.0\System.Security.AccessControl.xml" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\lib\netstandard2.0\System.Security.AccessControl.dll" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\lib\netstandard2.0\System.Security.AccessControl.xml" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\LICENSE.TXT" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net461\System.Security.AccessControl.dll" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net461\System.Security.AccessControl.xml" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net6.0\System.Security.AccessControl.dll" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net6.0\System.Security.AccessControl.xml" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.xml" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Employee\packages\System.Security.AccessControl.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\Icon.png" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.xml" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\net5.0\System.Security.Permissions.dll" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\net5.0\System.Security.Permissions.xml" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\net6.0\System.Security.Permissions.dll" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\net6.0\System.Security.Permissions.xml" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\netcoreapp3.1\System.Security.Permissions.dll" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\netcoreapp3.1\System.Security.Permissions.xml" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\netstandard2.0\System.Security.Permissions.dll" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\lib\netstandard2.0\System.Security.Permissions.xml" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\LICENSE.TXT" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\runtimes\win\lib\net461\System.Security.Permissions.dll" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\runtimes\win\lib\net461\System.Security.Permissions.xml" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Employee\packages\System.Security.Permissions.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\Icon.png" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\LICENSE.TXT" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\de\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\es\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\fr\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\it\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ja\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ko\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ru\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\zh-hans\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\zh-hant\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Employee\packages\System.Security.Principal.Windows.5.0.0\version.txt" />
+    <Content Include="Employee\ParfumUI.sln" />
+    <Content Include="Employee\ParfumUI\bin\Debug\EntityFramework.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Employee\ParfumUI\bin\Debug\EntityFramework.xml" />
+    <Content Include="Employee\ParfumUI\bin\Debug\ParfumUI.exe" />
+    <Content Include="Employee\ParfumUI\bin\Debug\ParfumUI.pdb" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Data.SqlClient.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Data.SqlClient.xml" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Security.AccessControl.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Security.Permissions.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Security.Principal.Windows.dll" />
+    <Content Include="Employee\ParfumUI\bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Employee\ParfumUI\DataModelMsSql\ParfumDBFirstModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Employee\ParfumUI\EmloyeeParfum.csproj.user" />
+    <Content Include="Employee\ParfumUI\obj\Debug\EmloyeeParfum.csproj.FileListAbsolute.txt" />
+    <Content Include="Employee\ParfumUI\obj\Debug\ParfumUI.csproj.FileListAbsolute.txt" />
+    <Content Include="Employee\ParfumUI\obj\Debug\ParfumUI.exe" />
+    <Content Include="Employee\ParfumUI\obj\Debug\ParfumUI.pdb" />
+    <Content Include="Employee\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.Context.cs.dll" />
+    <Content Include="Employee\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.cs.dll" />
+    <Content Include="Employee\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.Designer.cs.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.xml" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="Users\packages\EntityFramework.6.2.0\tools\migrate.exe" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\Icon.png" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net6.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net6.0\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\LICENSE.TXT" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\runtimes\win\lib\net461\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\runtimes\win\lib\net461\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Users\packages\System.Configuration.ConfigurationManager.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\Icon.png" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\LICENSE.TXT" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\net451\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\net46\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\de\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\es\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\fr\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\it\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ja\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ko\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ru\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\de\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\es\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\fr\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\it\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ja\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ko\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ru\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.xml" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\useSharedDesignerContext.txt" />
+    <Content Include="Users\packages\System.Data.SqlClient.4.8.3\version.txt" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\Icon.png" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.xml" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\lib\net6.0\System.Security.AccessControl.dll" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\lib\net6.0\System.Security.AccessControl.xml" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\lib\netstandard2.0\System.Security.AccessControl.dll" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\lib\netstandard2.0\System.Security.AccessControl.xml" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\LICENSE.TXT" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net461\System.Security.AccessControl.dll" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net461\System.Security.AccessControl.xml" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net6.0\System.Security.AccessControl.dll" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\net6.0\System.Security.AccessControl.xml" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.xml" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Users\packages\System.Security.AccessControl.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\Icon.png" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.xml" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\net5.0\System.Security.Permissions.dll" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\net5.0\System.Security.Permissions.xml" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\net6.0\System.Security.Permissions.dll" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\net6.0\System.Security.Permissions.xml" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\netcoreapp3.1\System.Security.Permissions.dll" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\netcoreapp3.1\System.Security.Permissions.xml" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\netstandard2.0\System.Security.Permissions.dll" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\lib\netstandard2.0\System.Security.Permissions.xml" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\LICENSE.TXT" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\runtimes\win\lib\net461\System.Security.Permissions.dll" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\runtimes\win\lib\net461\System.Security.Permissions.xml" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Users\packages\System.Security.Permissions.6.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\Icon.png" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\lib\netstandard2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\LICENSE.TXT" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\de\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\es\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\fr\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\it\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ja\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ko\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\ru\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\zh-hans\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard1.3\zh-hant\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\ref\netstandard2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net461\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net461\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\net46\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.0\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\runtimes\win\lib\netstandard1.3\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\useSharedDesignerContext.txt" />
+    <Content Include="Users\packages\System.Security.Principal.Windows.5.0.0\version.txt" />
+    <Content Include="Users\ParfumUI.sln" />
+    <Content Include="Users\ParfumUI\bin\Debug\EntityFramework.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Users\ParfumUI\bin\Debug\EntityFramework.xml" />
+    <Content Include="Users\ParfumUI\bin\Debug\ParfumUI.exe" />
+    <Content Include="Users\ParfumUI\bin\Debug\ParfumUI.pdb" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Data.SqlClient.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Data.SqlClient.xml" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Security.AccessControl.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Security.Permissions.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Security.Principal.Windows.dll" />
+    <Content Include="Users\ParfumUI\bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Users\ParfumUI\DataModelMsSql\ParfumDBFirstModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ParfumDBFirstModel1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Users\ParfumUI\obj\Debug\EmloyeeParfum.csproj.FileListAbsolute.txt" />
+    <Content Include="Users\ParfumUI\obj\Debug\ParfumUI.csproj.FileListAbsolute.txt" />
+    <Content Include="Users\ParfumUI\obj\Debug\ParfumUI.exe" />
+    <Content Include="Users\ParfumUI\obj\Debug\ParfumUI.pdb" />
+    <Content Include="Users\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.Context.cs.dll" />
+    <Content Include="Users\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.cs.dll" />
+    <Content Include="Users\ParfumUI\obj\Debug\TempPE\DataModelMsSql.ParfumDBFirstModel.Designer.cs.dll" />
+    <Content Include="Users\ParfumUI\obj\Debug\Users.csproj.FileListAbsolute.txt" />
+    <Content Include="Users\ParfumUI\Users.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminPanel\ParfumUI\bin\Release\" />
+    <Folder Include="Employee\ParfumUI\bin\Release\" />
+    <Folder Include="Users\ParfumUI\bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

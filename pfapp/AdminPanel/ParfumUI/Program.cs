@@ -1,10 +1,12 @@
-﻿using System;
+﻿using ParfumUI.CatogoryView;
+using ParfumUI.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryApi
+namespace ParfumUI
 {
     static class Program
     {
@@ -16,7 +18,7 @@ namespace LibraryApi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new SinginParfumApp());
         }
     }
 }
