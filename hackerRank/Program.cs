@@ -40,7 +40,6 @@ namespace hackerRank
             //    Console.WriteLine("");
             //}
             #endregion
-            Console.WriteLine("--------------");
 
             #region Time Conversion
             //string s = "07:05:45 pm";

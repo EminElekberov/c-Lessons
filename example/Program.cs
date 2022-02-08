@@ -104,7 +104,6 @@ namespace example
 
         //Console.WriteLine(a+"b="+b+"c="+c);
 
-        //Console.WriteLine("__________");
         #region
         #region
 
