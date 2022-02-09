@@ -87,6 +87,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "masterClassTask", "masterCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pfapp", "pfapp\pfapp.csproj", "{37326324-0DCB-46CA-B61B-EA9D76174C17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allRepeat", "allRepeat\allRepeat.csproj", "{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -261,6 +263,10 @@ Global
 		{37326324-0DCB-46CA-B61B-EA9D76174C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37326324-0DCB-46CA-B61B-EA9D76174C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37326324-0DCB-46CA-B61B-EA9D76174C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
