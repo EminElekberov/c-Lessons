@@ -28,9 +28,9 @@ namespace allRepeat
 
         private void cmb_GroupUpdate_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //
             Group group = cmb_GroupUpdate.SelectedItem as Group;
             cmb_studentUpdate.Items.Clear();
-
             cmb_studentUpdate.Items.AddRange(group.GetAlLStudent().ToArray());
         }
 
