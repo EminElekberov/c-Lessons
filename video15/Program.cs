@@ -24,6 +24,8 @@ namespace video15
             //    {
             //        goto START;
             //    }
+            //
+            dcsdsd
             //    Console.WriteLine("icinde a herfi olan sozler:");
             //    foreach (string i in PasswordList(words, i => i.Contains("a")))
             //    {
