@@ -31,14 +31,15 @@ namespace video11_task_
             library.Add(book1);
             library.Add(book2);
             library.Add(book3);
-            //Console.WriteLine(library.Books.Count);
-            //foreach (var item in library.Filtername("XXX",Genre.Drama))
-            //{
-            //    Console.WriteLine(item.Name+" "+item.Author+" "+item.Genre.ToString());
-            //}
+            Console.WriteLine(library.Books.Count);
+            foreach (var item in library.Filtername("XXX", Genre.Drama))
+            {
+                Console.WriteLine(item.Name + " " + item.Author + " " + item.Genre.ToString());
+            }
             //Console.WriteLine("-----------");
             //library.ShowInfo("Python");
             //library.Remove("Python");
+            //
         }
     }
 }
