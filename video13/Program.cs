@@ -15,6 +15,7 @@ namespace video13
             //Console.WriteLine("bir ay secin");
             //byte month = byte.Parse(Console.ReadLine());
             //Console.WriteLine(ch.Invoke(method, month));
+            Console.WriteLine(  "-----");
             #endregion
             #region
             Console.WriteLine("1. ayin adini yazdirmaq \n 2.Fesilin adinin yazdirmaq ");
