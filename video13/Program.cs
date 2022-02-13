@@ -8,6 +8,7 @@ namespace video13
         {
             #region 1ci usul
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine("--------------");
             //Choose ch = ChooseMethod;
             //Console.WriteLine("1. ayin adini yazdirmaq \n 2.Fesilin adinin yazdirmaq ");
             //Console.WriteLine("bir metod secin");
@@ -15,7 +16,6 @@ namespace video13
             //Console.WriteLine("bir ay secin");
             //byte month = byte.Parse(Console.ReadLine());
             //Console.WriteLine(ch.Invoke(method, month));
-            Console.WriteLine(  "-----");
             #endregion
             #region
             Console.WriteLine("1. ayin adini yazdirmaq \n 2.Fesilin adinin yazdirmaq ");
