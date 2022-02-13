@@ -11,20 +11,19 @@ namespace video15
             #region foreach
             //    Console.OutputEncoding = System.Text.Encoding.UTF8;
             //    List<string> words = new List<string>();
-            START:
+            //START:
             //    for (int i = 0; i < 3; i++)
             //    {
             //        Console.WriteLine("bir soz daxil edin: ");
             //        string word = Console.ReadLine();
             //        words.Add(word);
+            ////    }
+            //    Console.WriteLine("helede soz daxil edilsinmi? (y/n)");
+            //    if (Console.ReadKey().Key == ConsoleKey.Y)
+            //    {
+            //    goto START;
             //    }
-                Console.WriteLine("helede soz daxil edilsinmi? (y/n)");
-                if (Console.ReadKey().Key == ConsoleKey.Y)
-                {
-                goto START;
-                }
             //
-            dcsdsd
             //    Console.WriteLine("icinde a herfi olan sozler:");
             //    foreach (string i in PasswordList(words, i => i.Contains("a")))
             //    {

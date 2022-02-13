@@ -12,15 +12,6 @@ namespace video20
             Assembly Curassembly = Assembly.GetExecutingAssembly();
             Console.WriteLine(Curassembly.FullName);
             Console.WriteLine("-----------");
-            foreach (var item in type.GetProperties())
-            {
-                if (item.PropertyType== lastName)
-                {
-
-                }
-                Console.WriteLine(item);
-            }
-            
             Console.WriteLine("-----------");
 
             foreach (MemberInfo item in type.GetMembers())
