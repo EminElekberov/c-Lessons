@@ -13,7 +13,6 @@ namespace video13
             //Console.WriteLine("bir metod secin");
             //string method = Console.ReadLine();
             //Console.WriteLine("bir ay secin");
-            //
             //byte month = byte.Parse(Console.ReadLine());
             //Console.WriteLine(ch.Invoke(method, month));
             #endregion
@@ -77,6 +76,7 @@ namespace video13
                 }
                 else if (method == "2")
                 {
+                    Console.WriteLine("-------s");
                     PrintInfo("daxil edilen reqeme uygun fesil gosderen proqram");
                     string season;
                     switch (month)
