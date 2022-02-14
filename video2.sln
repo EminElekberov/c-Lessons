@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pfapp", "pfapp\pfapp.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allRepeat", "allRepeat\allRepeat.csproj", "{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reppf", "reppf\reppf.csproj", "{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -267,6 +269,10 @@ Global
 		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A66DD8B9-56A5-4176-A19F-6B5D59821EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

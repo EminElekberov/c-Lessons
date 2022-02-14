@@ -248,5 +248,10 @@ namespace ParfumUI.Users
             }
             return isAdd;
         }
+
+        private void dataGridViwUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

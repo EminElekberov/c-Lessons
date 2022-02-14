@@ -49,7 +49,7 @@
     <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryAdd.Designer.cs">
+    <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryAdd.designer.cs">
       <DependentUpon>CategoryAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\ParfumUI\CatogoryView\CategoryCreate.cs">
