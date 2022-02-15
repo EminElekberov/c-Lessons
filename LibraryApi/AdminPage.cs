@@ -84,5 +84,10 @@ namespace LibraryApi
             ReturnBook returnBook = new ReturnBook();
             returnBook.ShowDialog();
         }
+
+        private void StudentListDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

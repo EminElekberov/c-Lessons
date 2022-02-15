@@ -63,6 +63,7 @@ namespace LibraryApi
             this.StudentListDgv.Name = "StudentListDgv";
             this.StudentListDgv.Size = new System.Drawing.Size(801, 165);
             this.StudentListDgv.TabIndex = 1;
+            this.StudentListDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentListDgv_CellContentClick);
             this.StudentListDgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentListDgv_CellDoubleClick);
             // 
             // label1
