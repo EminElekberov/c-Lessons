@@ -7,7 +7,7 @@ namespace video2
     {
         static void Main(string[] args)
         {
-
+            //
             //Console.WriteLine("Secim edin \n" +
             //    "\n A" +
             //    "\n b");
@@ -16,6 +16,7 @@ namespace video2
             //string message = null;
             //switch (res)
             //{
+            //
             //    case 1:
             //        message = "bu herf A dir";
             //        break;
