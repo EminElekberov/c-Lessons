@@ -28,7 +28,6 @@ namespace video2
             //        break;
             //}
             //return message;
-            //
             Console.WriteLine("reqem daxil edin");
             int s = Convert.ToInt32(Console.ReadLine());
             if (s > 0)
@@ -51,6 +50,7 @@ namespace video2
             Console.WriteLine(a.CompareTo(b));
             Console.WriteLine(string.Concat(a,b));
         */
+            //
             //int i = 10;
             //object o = i;
             //Console.WriteLine(o);
