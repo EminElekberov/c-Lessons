@@ -28,11 +28,12 @@ namespace video2
             //        break;
             //}
             //return message;
+            //
             Console.WriteLine("reqem daxil edin");
             int s = Convert.ToInt32(Console.ReadLine());
             if (s > 0)
             {
-                //
+                
                 Console.WriteLine("bu eded mubet ededdir");
             }
             else if (s < 0)
