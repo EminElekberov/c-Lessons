@@ -11,7 +11,7 @@ namespace ex
         {
             this.Books = new List<Medicine>();
         }
-
+        //
         public void AddMedicine(Medicine medicine)
         {
             string lowercase = medicine.Name.Trim().ToLower();
@@ -19,6 +19,7 @@ namespace ex
             if (medicine1==null)
             {
                 Books.Add(medicine);
+                Console.WriteLine();
                 Console.WriteLine("elave olundu");
             }
             else
