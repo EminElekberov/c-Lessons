@@ -20,6 +20,10 @@ namespace ex
             {
                 Books.Add(medicine);
                 Console.WriteLine();
+
+
+                //
+
                 Console.WriteLine("elave olundu");
             }
             else
