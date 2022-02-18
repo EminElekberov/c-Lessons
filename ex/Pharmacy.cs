@@ -20,10 +20,6 @@ namespace ex
             {
                 Books.Add(medicine);
                 Console.WriteLine();
-
-
-                //
-
                 Console.WriteLine("elave olundu");
             }
             else
@@ -31,6 +27,7 @@ namespace ex
                 medicine1.Count++;
                 Console.WriteLine("sayi artdis"+medicine1.Count);
             }
+            //
         }
 
         public Medicine FindMedicineByName(string medicinename)
