@@ -68,8 +68,8 @@ namespace ex
             }
             else
             {
-                Console.WriteLine();
                 Console.WriteLine("kifayet qeder derman yoxdur");
+                Console.WriteLine();
             }
         }
     }
