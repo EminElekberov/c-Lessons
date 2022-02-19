@@ -64,12 +64,12 @@ namespace ex
                 sell.Count -= buyproductCount;
                 double resultprice = buyproductCount * sell.Price;
                 Medicine._totalInCome += resultprice;
+                Console.WriteLine();
                 Console.WriteLine($"umumi qiymet {resultprice} manat elde qalan derman sayi {sell.Count} ,elde edilen gelir {Medicine._totalInCome}");
             }
             else
             {
                 Console.WriteLine("kifayet qeder derman yoxdur");
-                Console.WriteLine();
             }
         }
     }
