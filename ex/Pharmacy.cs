@@ -11,7 +11,6 @@ namespace ex
         {
             this.Books = new List<Medicine>();
         }
-        //
         public void AddMedicine(Medicine medicine)
         {
             string lowercase = medicine.Name.Trim().ToLower();
@@ -27,7 +26,6 @@ namespace ex
                 medicine1.Count++;
                 Console.WriteLine("sayi artdis"+medicine1.Count);
             }
-            //
         }
 
         public Medicine FindMedicineByName(string medicinename)
@@ -44,7 +42,7 @@ namespace ex
             }
             return med1;
         }
-
+        //
         public void Medicines(string medicine)
         {
             string find = medicine.Trim().ToLower();
