@@ -27,8 +27,6 @@ namespace ex
                 Console.WriteLine("sayi artdis"+medicine1.Count);
             }
         }
-        //
-        //
         public Medicine FindMedicineByName(string medicinename)
         {
             string med = medicinename.Trim().ToLower();
@@ -70,6 +68,7 @@ namespace ex
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("kifayet qeder derman yoxdur");
             }
         }
