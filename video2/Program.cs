@@ -16,7 +16,7 @@ namespace video2
             //string message = null;
             //switch (res)
             //{
-            //cw        
+            //
             //    case 1:
             //        message = "bu herf A dir";
             //        break;
