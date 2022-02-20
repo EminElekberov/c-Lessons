@@ -4,7 +4,7 @@ using System.Text;
 
 namespace video3
 {
-    class Cars
+    public  class Cars
     {
         public string Name;
         public int DoorCount;

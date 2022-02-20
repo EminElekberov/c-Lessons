@@ -17,7 +17,6 @@ namespace video14
         public ATM(double Balanceamount)
         {
             Balance = Balanceamount;
-
         }
         public void WithDraw(double amount)
         {
