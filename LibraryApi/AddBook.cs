@@ -131,7 +131,6 @@ namespace LibraryApi
             {
                 _db.Books.Remove(book);
                 MessageBox.Show("Success");
-                //
             }
             else
             {
@@ -140,7 +139,7 @@ namespace LibraryApi
                 return;
             }
             //_db.SaveChanges();
-            //
+            
 
         }
 
@@ -148,6 +147,7 @@ namespace LibraryApi
         {
             AddReader addReader = new AddReader();
             addReader.ShowDialog();
+            //
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
