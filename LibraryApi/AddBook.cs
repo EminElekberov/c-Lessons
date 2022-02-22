@@ -153,13 +153,13 @@ namespace LibraryApi
         {
             AddReader addReader = new AddReader();
             addReader.ShowDialog();
+            //
         }
 
         private void bookListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BookList bookList = new BookList();
             bookList.ShowDialog();
-            //
         }
 
         private void giveBookToolStripMenuItem_Click(object sender, EventArgs e)
