@@ -17,10 +17,10 @@ namespace ex
             ////ph.Medicines("nospa");
             //ph.Sell("Adalzit", 15);
             //ph.Sell("adalzit", 10);
+            Console.WriteLine();
             //ph.Sell("nospa", 15);
             #endregion
             GetValueIndexes("eduhweuih9868e3");
-            //
         }
         public static string GetValueIndexes(string pass)
         {
