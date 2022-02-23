@@ -57,8 +57,8 @@ namespace LibraryApi
         private void BtnRegister_Click_1(object sender, EventArgs e)
         {
             Regsiter regsiter = new Regsiter();
-            //
             regsiter.ShowDialog();
+            //
         }
 
         private void button1_Click(object sender, EventArgs e)
