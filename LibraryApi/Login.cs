@@ -58,9 +58,9 @@ namespace LibraryApi
         {
             Regsiter regsiter = new Regsiter();
             regsiter.ShowDialog();
-            //
         }
 
+        //
         private void button1_Click(object sender, EventArgs e)
         {
             string name = txtAdminEmailLogin.Text.Trim();
