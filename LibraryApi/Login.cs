@@ -54,10 +54,10 @@ namespace LibraryApi
                 MessageBox.Show("Please register", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void BtnRegister_Click_1(object sender, EventArgs e)
         {
             Regsiter regsiter = new Regsiter();
+            //
             regsiter.ShowDialog();
         }
 
