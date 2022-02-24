@@ -48,10 +48,11 @@ namespace LibraryApi
             {
                 AddBook addBook = new AddBook();
                 addBook.ShowDialog();
-                //
             }
             else
             {
+                //
+
                 MessageBox.Show("Please register", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
