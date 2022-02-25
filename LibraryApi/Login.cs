@@ -34,7 +34,6 @@ namespace LibraryApi
         {
 
         }
-        //
 
         private void BtnLogin_Click_1(object sender, EventArgs e)
         {
@@ -43,6 +42,7 @@ namespace LibraryApi
             if (name == "" || pass == "")
             {
                 MessageBox.Show("Fill", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             if (_db.Login_User.Where(x=>x.Email==name && x.Password==pass).Count()>0)
             {
