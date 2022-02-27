@@ -23,11 +23,12 @@ namespace LibraryApi
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            //
         }
         private void BtnLogin_Click(object sender, EventArgs e)
         {
         }
+        //
+
         private void tabPage2_Click(object sender, EventArgs e)
         {
         }
