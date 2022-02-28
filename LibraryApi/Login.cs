@@ -20,7 +20,6 @@ namespace LibraryApi
             InitializeComponent();
             _db = new LibraryEntities3();
         }
-        //
         private void BtnRegister_Click(object sender, EventArgs e)
         {
         }
@@ -29,7 +28,7 @@ namespace LibraryApi
         }
         private void tabPage2_Click(object sender, EventArgs e)
         {
-        }
+        }//
         private void BtnLogin_Click_1(object sender, EventArgs e)
         {
             string name = txtEmailLogin.Text.Trim();
