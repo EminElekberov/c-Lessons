@@ -51,13 +51,14 @@ namespace winform17
             {
                 Student st = new Student()
                 {
-                    //
+                    
                     Name = bName,
                     Surname = bSurname,
                     GroupNo = bGorupNo
                 };
                 _student.Add(st);
             }
+            //
             catch (Exception ex)
             {
 
