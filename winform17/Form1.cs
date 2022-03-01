@@ -62,7 +62,7 @@ namespace winform17
 
                 MessageBox.Show("xais olunur xanali doldurun ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-             dt_grid.DataSource = _student;
+             dt_grid.DataSource = _student;//
         }
         private void ListStudent()
         {

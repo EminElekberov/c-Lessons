@@ -16,7 +16,7 @@ namespace video13
             byte month = byte.Parse(Console.ReadLine());
             Console.WriteLine(ch.Invoke(method, month));
             #endregion
-            //#region
+            #region
             //Console.WriteLine("1. ayin adini yazdirmaq \n 2.Fesilin adinin yazdirmaq ");
             //Action<string, byte> action;
             //Console.WriteLine("bir metod secin");
@@ -109,7 +109,7 @@ namespace video13
             //        Console.WriteLine(season);
             //    }
             //}
-            //#endregion
+            #endregion
         }
         #region 1 ci usul
         public delegate string Print(byte Month);

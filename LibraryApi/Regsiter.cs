@@ -52,7 +52,6 @@ namespace LibraryApi
             }
             catch (Exception)
             {
-
                 throw;
             }
             MessageBox.Show("Successfully Registr", "Success", MessageBoxButtons.OK, MessageBoxIcon.Warning);
