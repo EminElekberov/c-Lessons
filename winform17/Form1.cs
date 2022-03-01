@@ -47,11 +47,11 @@ namespace winform17
             string bName = txt_name.Text.Trim();
             string bSurname = txt_surname.Text.Trim();
            string bGorupNo=cmb_select.Text.Trim();
-            //
             try
             {
                 Student st = new Student()
                 {
+                    //
                     Name = bName,
                     Surname = bSurname,
                     GroupNo = bGorupNo
