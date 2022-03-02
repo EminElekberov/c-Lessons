@@ -58,12 +58,12 @@ namespace winform17
                 };
                 _student.Add(st);
             }
-            //
             catch (Exception ex)
             {
 
                 MessageBox.Show("xais olunur xanali doldurun ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //
              dt_grid.DataSource = _student;//
         }
         private void ListStudent()
