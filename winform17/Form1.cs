@@ -45,6 +45,7 @@ namespace winform17
         private void btn_add_Click(object sender, EventArgs e)
         {
             string bName = txt_name.Text.Trim();
+            //
             string bSurname = txt_surname.Text.Trim();
            string bGorupNo=cmb_select.Text.Trim();
             try
@@ -63,7 +64,7 @@ namespace winform17
 
                 MessageBox.Show("xais olunur xanali doldurun ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //
+            
              dt_grid.DataSource = _student;//
         }
         private void ListStudent()
