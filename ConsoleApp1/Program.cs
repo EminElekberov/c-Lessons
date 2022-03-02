@@ -33,7 +33,7 @@ namespace ConsoleApp1
 
             //            }
 
-            //            if else example
+                    if else example
             //            Console.WriteLine("reqem daxil edin");
             //            int s = Convert.ToInt32(Console.ReadLine());
             //            if (s > 0)
