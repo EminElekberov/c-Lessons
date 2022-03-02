@@ -10,7 +10,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            char[] array1 = { 'a', 'b', 'c' };
+
+            for (int i = 0; ; i++)
+            {
+                Console.WriteLine(i);
+            }
+           // char[] array1 = { 'a', 'b', 'c' };
             
             //            switch example
             //string choice = Console.ReadLine();
