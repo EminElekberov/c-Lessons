@@ -30,9 +30,9 @@ namespace ConsoleApp1
             //                default:
             //                    Console.WriteLine("Invalid response");
             //                    break;
-
-            //            }
             //
+            //            }
+            
             //        if else example
             //            Console.WriteLine("reqem daxil edin");
             //            int s = Convert.ToInt32(Console.ReadLine());
