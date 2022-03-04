@@ -16,7 +16,6 @@ namespace ConsoleApp1
             }
             //
            // char[] array1 = { 'a', 'b', 'c' };
-            //
             //            switch example
             //string choice = Console.ReadLine();
             //            switch (choice)
@@ -62,7 +61,7 @@ namespace ConsoleApp1
             //                Console.WriteLine(i);
             //                i++;
             //            }
-
+            //
             //            int i = 1;
             //            while (i < 100)
             //            {
