@@ -16,7 +16,7 @@ namespace ConsoleApp1
             }
             //
            // char[] array1 = { 'a', 'b', 'c' };
-            
+            //
             //            switch example
             //string choice = Console.ReadLine();
             //            switch (choice)
@@ -31,7 +31,6 @@ namespace ConsoleApp1
             //                    Console.WriteLine("Invalid response");
             //                    break;
             //            }
-            //
             //        if else example
             //            Console.WriteLine("reqem daxil edin");
             //            int s = Convert.ToInt32(Console.ReadLine());
