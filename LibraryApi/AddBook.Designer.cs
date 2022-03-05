@@ -190,6 +190,7 @@ namespace LibraryApi
             this.txtwriter.Name = "txtwriter";
             this.txtwriter.Size = new System.Drawing.Size(190, 20);
             this.txtwriter.TabIndex = 33;
+            this.txtwriter.TextChanged += new System.EventHandler(this.txtwriter_TextChanged);
             // 
             // button1
             // 
@@ -228,14 +229,14 @@ namespace LibraryApi
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 

@@ -70,6 +70,7 @@ namespace LibraryApi
             this.txtRepPass.Name = "txtRepPass";
             this.txtRepPass.Size = new System.Drawing.Size(197, 20);
             this.txtRepPass.TabIndex = 25;
+            this.txtRepPass.TextChanged += new System.EventHandler(this.txtRepPass_TextChanged);
             // 
             // label3
             // 
