@@ -42,7 +42,6 @@ namespace LibraryApi
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtwriter = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.readerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +49,7 @@ namespace LibraryApi
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giveBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtwriter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtamount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprice)).BeginInit();
@@ -183,15 +183,6 @@ namespace LibraryApi
             this.label6.TabIndex = 32;
             this.label6.Text = "Writer";
             // 
-            // txtwriter
-            // 
-            this.txtwriter.Location = new System.Drawing.Point(303, 217);
-            this.txtwriter.Margin = new System.Windows.Forms.Padding(2);
-            this.txtwriter.Name = "txtwriter";
-            this.txtwriter.Size = new System.Drawing.Size(190, 20);
-            this.txtwriter.TabIndex = 33;
-            this.txtwriter.TextChanged += new System.EventHandler(this.txtwriter_TextChanged);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
@@ -254,13 +245,21 @@ namespace LibraryApi
             this.giveBookToolStripMenuItem.Text = "Give Book";
             this.giveBookToolStripMenuItem.Click += new System.EventHandler(this.giveBookToolStripMenuItem_Click);
             // 
+            // txtwriter
+            // 
+            this.txtwriter.Location = new System.Drawing.Point(303, 217);
+            this.txtwriter.Name = "txtwriter";
+            this.txtwriter.Size = new System.Drawing.Size(186, 20);
+            this.txtwriter.TabIndex = 36;
+            this.txtwriter.TextChanged += new System.EventHandler(this.txtwriter_TextChanged);
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 345);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtwriter);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
@@ -302,7 +301,6 @@ namespace LibraryApi
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtwriter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem readerToolStripMenuItem;
@@ -310,5 +308,6 @@ namespace LibraryApi
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giveBookToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtwriter;
     }
 }

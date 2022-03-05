@@ -167,5 +167,10 @@ namespace LibraryApi
             UserOrder userOrder = new UserOrder();
             userOrder.ShowDialog();
         }
+
+        private void txtwriter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
