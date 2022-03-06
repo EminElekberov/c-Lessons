@@ -140,7 +140,7 @@ namespace LibraryApi
             }
             //_db.SaveChanges();
             
-
+            //
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
@@ -166,7 +166,6 @@ namespace LibraryApi
         {
             UserOrder userOrder = new UserOrder();
             userOrder.ShowDialog();
-            //
         }
 
         private void txtwriter_TextChanged(object sender, EventArgs e)
