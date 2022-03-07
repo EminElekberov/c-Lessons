@@ -142,18 +142,17 @@ namespace LibraryApi
             
         }
 
-        //
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddReader addReader = new AddReader();
             addReader.ShowDialog();
         }
+        //
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddReader addReader = new AddReader();
             addReader.ShowDialog();
-            //
         }
 
         private void bookListToolStripMenuItem_Click(object sender, EventArgs e)
