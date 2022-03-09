@@ -109,7 +109,7 @@ namespace masterClassTask
             //dictionary.Add(2, "Emin");
             //Console.WriteLine(dictionary[1]);
             #endregion
-
+            //
 
             #region  4
             //Master master = new Master();

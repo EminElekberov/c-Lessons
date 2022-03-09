@@ -69,7 +69,6 @@ namespace ConsoleApp1
             //                i++;
             //            }
             //
-            //
             //            Console.ReadLine();
         }
     }
