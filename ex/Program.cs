@@ -6,6 +6,26 @@ namespace ex
     {
         static void Main(string[] args)
         {
+            int[] a = new int[100];
+            int i, n, sum = 0;
+            
+            Console.Write("how many enter number? :");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("element - {0} : ", i);
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (i = 0; i < n; i++)
+            {
+                sum += a[i];
+            }
+
+            Console.Write("Sum of all elements stored in the array is : {0}\n\n", sum);
+
             #region
             //Medicine med = new Medicine("Nospa",20,40);
             //Medicine med2 = new Medicine("Adalzit",30, 50);
@@ -17,10 +37,10 @@ namespace ex
             ////ph.Medicines("nospa");
             //ph.Sell("Adalzit", 15);
             //ph.Sell("adalzit", 10);
-            Console.WriteLine();
+            //Console.WriteLine();
             //ph.Sell("nospa", 15);
             #endregion
-            GetValueIndexes("eduhweuih9868e3");
+            //GetValueIndexes("eduhweuih9868e3");
         }
         public static string GetValueIndexes(string pass)
         {
