@@ -25,7 +25,7 @@ namespace video19
             #endregion
 
             #region
-            //Task task = new Task(CallMethod);
+            Task task = new Task(CallMethod);
             //task.Start();
             //task.Wait();
             //Console.ReadLine();
@@ -83,6 +83,7 @@ namespace video19
         public static void X(object state)
         {
             Console.WriteLine("hello");
+            //
         }
         #endregion
         static async Task<string> WriteFile(string file)
