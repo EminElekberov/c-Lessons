@@ -27,6 +27,7 @@ namespace ParfumUI.CatogoryView
 
         private void CategoryAdd_Load(object sender, EventArgs e)
         {
+            //
             LoadCommonData.LoadSearchName(combSearchName);
             LoadCategoryList();
         }
