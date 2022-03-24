@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="dateinputday">
+    <input type="text" id="dateinput">
+    <input type="text" id="dateinputYear">
+    <button class="btn btn-danger" id="fetchUserDataBtn">Click button</button>
+
+</body>
+
+</html>
+
+<script>
+    var month=document.getElementById('dateinput');
+    var day=document.getElementById('dateinputday');
+    var year=document.getElementById('dateinputYear');
+
+    var valueMonth=month.value;
+    document.getElementById('fetchUserDataBtn').addEventListener('click', prayerFunction);
+
+    function prayerFunction(valueMonth) {
+        fetch(`https://api.aladhan.com/v1/calendar?latitude=51.508515&longitude=-0.1254872&method=${day.value}&month=${month.value}&year=${year.value}`)
+                .then(response => response.json())
+                .then(datas =>{
+                        datas.data.forEach(element => {
+                             console.log("Imsak "+element.timings.Imsak+" "+"Sunrise "+element.timings.Sunrise+" "+"Zohr "+element.timings.Dhuhr+" "+"Sam "+element.timings.Maghrib+" "+"isha "+element.timings.Isha+" "+"Xuften "+element.timings.Midnight)
+                        });
+                } )
+    }
+</script>
