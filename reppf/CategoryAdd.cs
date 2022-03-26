@@ -32,6 +32,7 @@ namespace ParfumUI.CatogoryView
             LoadCategoryList();
         }
 
+        
         //
         private void LoadCategoryList()
         {
