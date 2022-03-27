@@ -17,7 +17,7 @@ addBasket.forEach(btn => {
          let prodName=this.parentElement.firstElementChild.innerText;
          let prodImage=this.parentElement.previousElementSibling.getAttribute("src");
          let price=this.previousElementSibling.innerText;
-
+     
          if(localStorage.getItem("basket")==null){
             localStorage.setItem("basket",JSON.stringify([]));
            }
