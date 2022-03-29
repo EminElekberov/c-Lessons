@@ -31,9 +31,9 @@ namespace ParfumUI.CatogoryView
             LoadCommonData.LoadSearchName(combSearchName);
             LoadCategoryList();
         }
-
-        
         //
+        
+        
         
 
         
