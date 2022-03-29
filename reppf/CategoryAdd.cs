@@ -33,10 +33,10 @@ namespace ParfumUI.CatogoryView
         }
 
         
-        
+        //
         
 
-        //
+        
         private void LoadCategoryList()
         {
             listCategory.Items.Clear();
