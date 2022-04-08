@@ -31,8 +31,11 @@ newArray.forEach(element => {
     totalPrice.innerText=(parseInt(tdCount.innerText)*parseInt(tdPrice.innerText))+" azn";
     let tdRemove=document.createElement("td");
     tdRemove.innerHTML="<i class=\"fas fa-trash\"></i>"
-    tdRemove.onclick=function(){
-        alert();
+    tdRemove.onclick=function(e){
+        const deleted=e.target.parentElement.getAtribute("data-id");
+        delete(deleted)
+        addBasketDetail()
+        location.reload()
     }
     tr.append(tdImage,tdName,tdCount,tdPrice,totalPrice,tdRemove);
     table.lastElementChild.append(tr);
