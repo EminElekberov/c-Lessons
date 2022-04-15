@@ -62,7 +62,6 @@ namespace video19
             {
                 string s = await streamReader.ReadToEndAsync();
                 lenght = s.Length;
-
             }
             Console.WriteLine("read end");
             return lenght;

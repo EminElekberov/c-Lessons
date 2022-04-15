@@ -23,6 +23,7 @@ $"Balans {m} AZN");
             atm.WithDraw(300);
             atm.WithDraw(500);
             Console.ReadLine();
+
             #endregion
 
             #region
