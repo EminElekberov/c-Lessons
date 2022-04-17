@@ -6,6 +6,20 @@ namespace video12
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("daxil et");
+            string s = Console.ReadLine();
+            char[] words = s.ToCharArray();
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (words[i]>=48 && words[i]<=57)
+                {
+                    Console.WriteLine(words[i]+" bu reqemdir");
+                }
+                else
+                {
+                    Console.WriteLine(words[i]+" bu reqen deyil");
+                }
+            }
             #region Extension
             //string email = "eminelekberov09@gmail.com";
             //email.IsEmail();
@@ -71,6 +85,8 @@ namespace video12
             //Console.WriteLine(check(person));
             #endregion
         }
+
+       
         #region Example 2
         //static int SumEven(int[] arr)
         //{

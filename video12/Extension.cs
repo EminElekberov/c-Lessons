@@ -20,5 +20,9 @@ namespace video12
                 return false;
             }
         }
+        public static bool HasValue(this double value)
+        {
+            return !Double.IsNaN(value) && !Double.IsInfinity(value);
+        }
     }
 }
