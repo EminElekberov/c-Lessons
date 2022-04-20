@@ -9,24 +9,24 @@ namespace video2
     {
         static void Main(string[] args)
         {
-             WriteToFile();
-            //Console.WriteLine("daxil edin: ");
-            //string word = Console.ReadLine();
-            //char[] wods = word.ToCharArray();
-            //for (int i = 0; i < wods.Length; i++)
-            //{
-            //    if (wods[i].ToString()=="*")
-            //    {
-            //        Console.WriteLine("burda * isaresi var"+wods[i]);
-            //        Console.WriteLine(wods[i]);
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("burada * isaresi yoxdur");
-            //        var x = wods[i].ToString();
-            //        x = "-";
-            //    }
-            //}
+            // WriteToFile();
+            Console.WriteLine("daxil edin: ");
+            string word = Console.ReadLine();
+            char[] wods = word.ToCharArray();
+            for (int i = 0; i < wods.Length; i++)
+            {
+                if (wods[i].ToString() == "*")
+                {
+                    Console.WriteLine("burda * isaresi var" + wods[i]);
+                    Console.WriteLine(wods[i]);
+                }
+                else
+                {
+                    Console.WriteLine("burada * isaresi yoxdur");
+                    var x = wods[i].ToString();
+                    x = "-";
+                }
+            }
 
             #region
             //
