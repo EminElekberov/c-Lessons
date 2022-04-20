@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace video2
 {
@@ -7,6 +9,26 @@ namespace video2
     {
         static void Main(string[] args)
         {
+             WriteToFile();
+            //Console.WriteLine("daxil edin: ");
+            //string word = Console.ReadLine();
+            //char[] wods = word.ToCharArray();
+            //for (int i = 0; i < wods.Length; i++)
+            //{
+            //    if (wods[i].ToString()=="*")
+            //    {
+            //        Console.WriteLine("burda * isaresi var"+wods[i]);
+            //        Console.WriteLine(wods[i]);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("burada * isaresi yoxdur");
+            //        var x = wods[i].ToString();
+            //        x = "-";
+            //    }
+            //}
+
+            #region
             //
             //Console.WriteLine("Secim edin \n" +
             //    "\n A" +
@@ -29,21 +51,21 @@ namespace video2
             //        break;
             //}
             //return message;
-            Console.WriteLine("reqem daxil edin");
-            int s = Convert.ToInt32(Console.ReadLine());
-            if (s > 0)
-            {
-                
-                Console.WriteLine("bu eded mubet ededdir");
-            }
-            else if (s < 0)
-            {
-                Console.WriteLine("bub eded menfidir");
-            }
-            else
-            {
-                Console.WriteLine("bu eded 0 beraberdir");
-            }
+            //Console.WriteLine("reqem daxil edin");
+            //int s = Convert.ToInt32(Console.ReadLine());
+            //if (s > 0)
+            //{
+
+            //    Console.WriteLine("bu eded mubet ededdir");
+            //}
+            //else if (s < 0)
+            //{
+            //    Console.WriteLine("bub eded menfidir");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("bu eded 0 beraberdir");
+            //}
             /*
             string a = "hello ";
             string b = "hello";
@@ -108,11 +130,42 @@ namespace video2
 
 
 
-            int number = 5;
-            ChangeNumber(ref number);
-            Console.WriteLine(number);
+            //int number = 5;
+            //ChangeNumber(ref number);
+            //Console.WriteLine(number);
+            #endregion
+        }
+        public static void WriteToFile()
+        {
+            using (StreamWriter sw = File.CreateText(@"D:\textTask.txt"))
+            {
+                sw.WriteLine("Please find the below generated table of 1 to 10");
+                sw.WriteLine("");
+                string s = Console.ReadLine();
+                sw.WriteLine(s);
+                Console.WriteLine("Table successfully written on file.");
+                Console.WriteLine(s.Length);
+            }
         }
 
+
+        // public static void WriteToFile()
+        //{
+        //    using (StreamWriter sw = File.CreateText(@"D:\textEmin.txt"))
+        //    {
+        //        sw.WriteLine("Please find the below generated table of 1 to 10");
+        //        sw.WriteLine("");
+        //        for (int i = 1; i <= 10; i++)
+        //        {
+        //            for (int j = 1; j <= 10; j++)
+        //            {
+        //                sw.WriteLine("{0}x{1}= {2}", i, j, (i * j));
+        //            }
+        //            sw.WriteLine("==============");
+        //        }
+        //        Console.WriteLine("Table successfully written on file.");
+        //    }
+        //}
         private static void ChangeNumber(ref int num)
         {
             num = 100;
@@ -166,14 +219,14 @@ namespace video2
 
 
        
-        int[] numbers = { 1, 2, 6, 5, 55, 23, 2, 5 };
-        int[] notDublicate = numbers.Distinct().ToArray();
-        Array.Sort(notDublicate);
+        //int[] numbers = { 1, 2, 6, 5, 55, 23, 2, 5 };
+        //int[] notDublicate = numbers.Distinct().ToArray();
+        //Array.Sort(notDublicate);
 
-        foreach (var item in notDublicate)
-        {
-            Console.WriteLine(item);
-        }
+        //foreach (var item in notDublicate)
+        //{
+        //    Console.WriteLine(item);
+        //}
         
 
         //int[] numbers2 = { 1, 2, 6, 5, 55, 23, 2, 5 };
