@@ -24,14 +24,11 @@ namespace video7_lesson_
                 _totalInCome += resultPrice;
                 Console.WriteLine($"{buyProductCount} mehsul satildi ve umumi qiymet{resultPrice} manat, " +
                     $"bazada ise umumi satisdan elde edilen gelir{_totalInCome} manat");
-
             }
             else
             {
                 Console.WriteLine($"Bazada {Count} mehsul var, sizin isteyinize uygun deyil");
             }
         }
-    
-   
     }
 }
