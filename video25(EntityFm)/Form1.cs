@@ -8,6 +8,7 @@ namespace video25_EntityFm_
 {
     public partial class Form1 : Form
     {
+
         private readonly Csharp03Entities1 db;
 
         public Form1()
