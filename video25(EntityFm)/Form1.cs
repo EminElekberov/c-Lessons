@@ -10,9 +10,9 @@ namespace video25_EntityFm_
     {
 
         private readonly Csharp03Entities1 db;
-
         public Form1()
         {
+
             InitializeComponent();
             db = new Csharp03Entities1();
 
