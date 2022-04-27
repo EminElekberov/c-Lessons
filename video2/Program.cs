@@ -10,6 +10,7 @@ namespace video2
         static void Main(string[] args)
         {
 
+
             // WriteToFile();
             Console.WriteLine("daxil edin: ");
             string word = Console.ReadLine();
