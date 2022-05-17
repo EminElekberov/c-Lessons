@@ -91,6 +91,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "allRepeat", "allRepeat\allR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reppf", "reppf\reppf.csproj", "{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aztu", "Aztu\Aztu.csproj", "{456635D8-F961-4095-B8AA-AF4838ACE7E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -273,6 +275,10 @@ Global
 		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B129834-05AB-4504-A7D4-8D1FFB27D0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456635D8-F961-4095-B8AA-AF4838ACE7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456635D8-F961-4095-B8AA-AF4838ACE7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456635D8-F961-4095-B8AA-AF4838ACE7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456635D8-F961-4095-B8AA-AF4838ACE7E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
