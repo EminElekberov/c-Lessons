@@ -9,9 +9,6 @@ namespace video7_lesson_
         public string color { get; set; }
         public string brand { get; set; }
         public double Millage { get; set; }
-
-
-
         public virtual void ShowInfo()
         {
             Console.WriteLine($"{brand} " +

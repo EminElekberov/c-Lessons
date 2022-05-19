@@ -37,11 +37,7 @@ namespace Aztu
                 }
                 arr[i, i] = min;
                 Console.WriteLine(min);
-
             }
-
-
-
             Console.WriteLine(new string('-', 50));
 
             for (int i = 0; i < 3; i++)
